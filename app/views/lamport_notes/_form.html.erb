@@ -1,0 +1,30 @@
+<%= form_with(model: lamport_note, local: true) do |form| %>
+  <% if lamport_note.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lamport_note.errors.count, "error") %> prohibited this lamport_note from being saved:</h2>
+
+      <ul>
+      <% lamport_note.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div id="new_formula">
+  <div class="field" align="center">
+    <% form.label :titulo %>
+    <%= form.text_field :titulo, id: :lamport_note_titulo, :size =>  "58" %>
+  </div>
+  <br>
+  <br>
+  <div class="field" align="center">
+    <% form.label :texto %>
+    <%= form.text_area :texto, id: :lamport_note_texto, cols: 70, rows: 10 %>
+  </div>
+  <br>
+  <div class="actions" align="center">
+    <%= form.submit class: "btn btn-default" %>
+  </div>
+<% end %>
+</div>

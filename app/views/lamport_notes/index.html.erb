@@ -1,0 +1,52 @@
+<br>
+<br>
+<br>  
+<br>
+<!DOCTYPE html>
+<html lang="en">
+<p id="notice"><%= notice %></p>
+<head>
+</head>
+<body>
+<%= stylesheet_link_tag "lamport_notes", :media => "all" %>
+<br>
+<br>
+<% @lamport_notes.each do |lamport_note| %>
+<p align="left">
+<div class="col-md-4">
+<div id="alinhamento">
+   <div id="margem" align="center">
+     <p style="color: white; background-color: black; border-radius: 2px;">
+     <%= lamport_note.titulo %>
+
+     </p>
+      <span class="glyphicon glyphicon-list-alt"></span>
+     <div id="rectangle_form" align="center">
+     <% lamport_note.texto %>
+     </div>
+  <tbody>
+     <br>
+      <tr>
+        <td><%= link_to 'Editar', edit_lamport_note_path(lamport_note), class: "btn btn-default" %></td>
+        <td><%= link_to 'Ver', lamport_note , class: "btn btn-default" %></td>
+        <td><%= link_to 'Apagar', lamport_note, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger" %></td>
+      </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</p>
+<% end %>
+<br>
+<div class="digg_pagination" align="center">
+    <div class="page_info">
+      <%= page_entries_info @lamport_notes_paginação %>
+    </div>
+
+        <%= will_paginate @lamport_notes_paginação  %>
+</div>
+</p>
+</body>
+
+</html>

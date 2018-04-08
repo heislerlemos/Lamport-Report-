@@ -1,0 +1,22 @@
+
+ <%= stylesheet_link_tag    "calendarios", :media => "all" %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="calendar-heading" align="center">
+<%= month_calendar(attribute: :start_time) do |date| %>
+  <%= date %>
+<% end %>
+</div>
+
+<div id="data" align="center">
+ 
+ <% notetempo = Time.new %>
+ <%= notetempo.inspect %>
+</div>

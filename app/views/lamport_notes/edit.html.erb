@@ -1,0 +1,7 @@
+<h1>Editing Lamport Note</h1>
+<%= stylesheet_link_tag "lamport_notes", :media => "all" %>
+
+<%= render 'form', lamport_note: @lamport_note %>
+
+<%= link_to 'Show', @lamport_note %> |
+<%= link_to 'Back', lamport_notes_path %>

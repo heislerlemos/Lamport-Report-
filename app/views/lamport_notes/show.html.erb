@@ -1,0 +1,40 @@
+<DOCTYPE html>
+<html lang="en">
+
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+<link href="css/bootstap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<head>
+<h1 align="right"> Show <small>report business solution</small></h1>
+<%= stylesheet_link_tag "lamport_notes", :media => "all" %>
+</head>
+<body>
+<p id="notice"><%= notice %></p>
+<p align="center">
+<div id="formulario">
+<div id="new_page", align="center">
+  <strong>Titulo:</strong>
+  <%= @lamport_note.titulo %>
+</div>
+<br>
+<div id="new_page", align="center">
+  <strong>Texto:</strong>
+  <%= @lamport_note.texto %>
+</div>
+<br>
+  <p align="center" style="color: white; background: black; width: 199px; border-radius: 8px;">
+    <%= @lamport_note.user.email %>
+  <p>
+  <p align="center">
+  <%= link_to 'Edit', edit_lamport_note_path(@lamport_note), class: "btn btn-success" %> |
+  <%= link_to 'Back', lamport_notes_path, class: "btn btn-danger" %>
+  </p>
+</div>
+
+</body>

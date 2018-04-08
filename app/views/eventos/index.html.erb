@@ -1,0 +1,42 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<p id="notice"><%= notice %></p>
+<%= stylesheet_link_tag "eventos", :media => "all" %>
+      <p align="center">
+ <thead>
+    <tr>
+      <th>Evento</th> //
+      <th>Começo</th>
+    </tr>
+  </thead>
+      <% @eventos.each do |evento| %>
+      <tr>
+
+<div align="center">
+<div id="containter">
+ 
+
+<p style="color: white; background: black; border-radius: 2px;">
+     <td><%= evento.name %><td>
+      <td><%= evento.start_time %></td>
+ </p>
+    <tbody>
+        <%= link_to 'New Evento', new_evento_path, class: "btn btn-default" %>
+        <td><%= link_to 'Edit', edit_evento_path(evento), class: "btn btn-default" %></td>
+        <td><%= link_to 'Destroy', evento, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger" %></td>
+      
+      </tr>
+</div> 
+</div>
+  </tbody>
+ <% end %>
+
+</p>
+
+<br>
+

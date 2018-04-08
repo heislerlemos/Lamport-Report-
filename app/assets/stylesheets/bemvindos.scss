@@ -1,0 +1,47 @@
+// Place all the styles related to the Bemvindos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+body {
+
+}
+
+
+div.progress {
+position: absolute;
+bottom: 55px;
+left: 10px;
+}
+
+#bemvindofonte {
+font-family: 'monospace', cursive;
+/**font-family: 'Sacramento', cursive;**/
+font-size: 36px;
+color: white;
+align-content: center;
+
+background-color: black;
+width: 590px;
+height: 527px;
+border-radius: 1px;
+  opacity: 0.7;
+}
+
+#imagem {
+  background-image: url("");
+  height: 600px;
+  width: 100px;
+  width: auto;
+  opacity: 0.9;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 60% 20%;
+	grid-column-gap: 1em;
+	grid-row-gap: 1em;
+}	
