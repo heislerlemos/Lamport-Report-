@@ -27,7 +27,7 @@
   <li class="<%= 'active' if current_page?(new_lamport_note_path) %>"><%= link_to "Notas Novo", new_lamport_note_path %></li>
   <li class="<%= 'active' if current_page?(calendarios_show_path) %>"><%= link_to "Calendario", calendarios_show_path %></li>
   <li class="<%= 'active' if current_page?(eventos_path) %>"><%= link_to "Eventos Menu", eventos_path %></li>
-  <li class="<%= 'active' if current_page?(eventos_path) %>"><%= link_to "Eventos Novo", new_evento_path %></li>
+  <li class="<%= 'active' if current_page?(new_evento_path) %>"><%= link_to "Eventos Novo", new_evento_path %></li>
   <li class="<%= 'active' if current_page?( user_session_path) %>"><%= link_to "Sign In",  user_session_path %></li>
   </ul>
   </div>
@@ -39,8 +39,6 @@
       <%= yield %>
              <p class="notice"><%= notice %></p>
 	    <p class="alert"><%= alert %></p>
-      <br>
-      <br>
       <small>
       ruby 2.3.3
       </small>

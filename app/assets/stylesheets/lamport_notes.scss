@@ -71,18 +71,9 @@ border-radius: 2px;
 }
 
 #formulario {
- width: 950px;
- height: 160px;
- background: black;
- border-radius: 6px;
- margin: 0 0 20px 0;
+  background-color: lightgrey;
  padding: 1.4em 1.4em;
  margin-right: auto;
- box-sizing: border-box;
- background-image: url("");
-
-
-
 }
 
 #navform {
@@ -92,7 +83,5 @@ align-self: top;
 #new_page {
 margin: 0 0 20px 0;
 background-color: white;
-border-left: 6px solid black;
-border-radius: 5px;
-
+border: solid black 1px;
 }
