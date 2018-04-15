@@ -18,7 +18,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
       # Sends email to user when user is created.
       ExampleMailer.sample_email(@user).deliver
-
+      
       format.html { redirect_to @user, notice: 'User was successfully created.' }
       format.json { render :show, status: :created, location: @user }
     else

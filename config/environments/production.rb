@@ -97,7 +97,7 @@ config.action_mailer.smtp_settings = {
  :address              => "smtp.gmail.com",
  :port                 => 587,
  :user_name            => ENV['heisler.lemos'],
- :password             => ENV['Maximos1234567890'],
+ :password             => ENV['password'],
  :authentication       => "plain",
 :enable_starttls_auto => true
 }
