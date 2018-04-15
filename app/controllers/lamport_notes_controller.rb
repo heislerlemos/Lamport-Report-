@@ -33,16 +33,23 @@ class LamportNotesController < ApplicationController
   # POST /lamport_notes.json
   def create
     @lamport_note = current_user.lamport_notes.build(lamport_note_params)
+    
     respond_to do |format|
+      
       if @lamport_note.save
+
         format.html { redirect_to @lamport_note, notice: 'Lamport note was successfully created.' }
         format.json { render :show, status: :created, location: @lamport_note }
+
       else
         format.html { render :new }
         format.json { render json: @lamport_note.errors, status: :unprocessable_entity }
       end
     end
+
   end
+
+
 
   # PATCH/PUT /lamport_notes/1
   # PATCH/PUT /lamport_notes/1.json
