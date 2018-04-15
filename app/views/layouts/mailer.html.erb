@@ -4,10 +4,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
       /* Email styles need to be inline */
+     p{
+       border: solid black 3px;
+       background-color: lightgrey;
+       font-family: monospace;
+       margin: 3px;
+       padding: 4px;
+       width: 300px;
+     }
     </style>
   </head>
 
   <body>
-    <%= yield %>
+
+  <p> <%= yield %></p>
   </body>
 </html>
