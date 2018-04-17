@@ -98,7 +98,7 @@ ActionMailer::Base.smtp_settings = {
   :address        => "smtp.mailgun.org",
   :domain         => ENV['sandbox6d0e985d20d041e7b6d011f40e173a9c.mailgun.org'],
   :user_name      => ENV['heisler.lemos@gmail.com'],
-  :password       => ENV['Elisa1234567890'],
+  :password       => ENV['##########'],
   :authentication => :plain,
 }}
 

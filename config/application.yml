@@ -1,5 +1,5 @@
 gmail_username: 'heisler.lemos@gmail.com'
-gmail_password: 'Elisa1234567890'
+gmail_password: '#######'
 
 api_key: 'key-a2e4870338e9fe4da1f5fdc81c4c94bc'
 domain: 'sandbox6d0e985d20d041e7b6d011f40e173a9c.mailgun.org'
@@ -8,5 +8,4 @@ username: 'postmaster@sandbox6d0e985d20d041e7b6d011f40e173a9c.mailgun.org'
 password: '14ad6b7d88c47f3827f671acadfa6022'
 
 gmail_username: 'heisler.lemos@gmail.com'
-gmail_password: 'Elisa1234567890'
-  
+gmail_password: '#########'
