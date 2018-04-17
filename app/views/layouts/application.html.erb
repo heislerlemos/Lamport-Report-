@@ -15,7 +15,7 @@
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-    <p style="margin-left: -173px; margin-top: 10px;"align="right"><%= image_tag("tumblr_n6iekuqY4N1qciftvo1_500.gif", :alt => "logo", :size => "35x35") %></p>
+    <p style="margin-left: -173px; margin-top: 10px;"align="right"><%= image_tag("tumblr_n6iekuqY4N1qciftvo1_500.gif", :alt => "logo", :size => "35x35") %></p> 
     <%= form_tag(lamport_notes_path, :method => "get", id: "search-form") do %>
   <%= text_field_tag :search, params[:search], placeholder: "Procura o seu relatorio" %>
       <%= submit_tag "search", class: "btn btn-primary" %>
