@@ -7,12 +7,10 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-  <div class="field"  style="color: black; border-radius: 4px; background-color: lightgrey; width: 800px;   position:absolute;  top:50%; left:25%; margin-left: -100px; margin-top:-200px; border: solid white 6px;" align="center">
+  <div class="field"  style="color: black; border-radius: 4px; background-color: white; width: 700px;   position:absolute;  top:50%; left:25%; margin-left: -5px; border: solid black 2px; margin-top:-200px; box-shadow: 4px 9px " align="center">
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-<p align="center"><%= image_tag("tumblr_n6iekuqY4N1qciftvo1_500.gif", :alt => "logo", :size => "100x100") %></p>
+<p style="margin: 20px; padding: 3px; " align="center"><%= image_tag("tumblr_n6iekuqY4N1qciftvo1_500.gif", :alt => "logo", :size => "90x90") %></p>
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
 <br>
@@ -27,7 +25,7 @@
 
 <% end %>
 <%= render "devise/shared/links" %>
-
+  
   </div>
 <br>
 <br>
