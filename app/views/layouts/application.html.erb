@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Lamport by heisler.lemos</title>
+    <title> Lamport</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -15,7 +15,7 @@
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-    <p align="right"><%= image_tag("tumblr_n6iekuqY4N1qciftvo1_500.gif", :alt => "logo", :size => "40x40") %></p>
+    <p style="margin-left: -153px; margin-top: 10px;"align="right"><%= image_tag("tumblr_n6iekuqY4N1qciftvo1_500.gif", :alt => "logo", :size => "35x35") %></p>
     <%= form_tag(lamport_notes_path, :method => "get", id: "search-form") do %>
   <%= text_field_tag :search, params[:search], placeholder: "Procura o seu relatorio" %>
   <%= submit_tag "Search" %>
@@ -25,7 +25,7 @@
   <li class="<%= 'active' if current_page?(lamport_notes_path) %>"><%= link_to "Notas Menu", lamport_notes_path %></li>
   <li class="<%= 'active' if current_page?(new_lamport_note_path) %>"><%= link_to "Notas Novo", new_lamport_note_path %></li>
   <li class="<%= 'active' if current_page?(calendarios_show_path) %>"><%= link_to "Calendario", calendarios_show_path %></li>
-  <li class="<%= 'active' if current_page?(eventos_path) %>"><%= link_to "Eventos Menu", eventos_path %></li>
+  <li class="<%= 'active' if current_page?(eventos_path) %>"><%= link_to "Eventos", eventos_path %></li>
   <li class="<%= 'active' if current_page?(new_evento_path) %>"><%= link_to "Eventos Novo", new_evento_path %></li>
   <li class="<%= 'active' if current_page?( user_session_path) %>"><%= link_to "Sign In",  user_session_path %></li>
     <li class="<%= 'active' if current_page?(destroy_user_session_path) %>"><%= link_to :logout, destroy_user_session_path, :method => :delete  %></li>
