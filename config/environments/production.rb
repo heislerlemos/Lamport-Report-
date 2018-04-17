@@ -93,14 +93,17 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   # SMTP settings for gmail
-config.action_mailer.smtp_settings = {
- :address              => "smtp.gmail.com",
- :port                 => 587,
- :user_name            => ENV['heisler.lemos'],
- :password             => ENV['password'],
- :authentication       => "plain",
-:enable_starttls_auto => true
-}
+ActionMailer::Base.smtp_settings = {
+  :port           => 587,
+  :address        => "smtp.mailgun.org",
+  :domain         => ENV['sandbox6d0e985d20d041e7b6d011f40e173a9c.mailgun.org'],
+  :user_name      => ENV['heisler.lemos@gmail.com'],
+  :password       => ENV['Elisa1234567890'],
+  :authentication => :plain,
+}}
 
+
+config.active_job.queue_adapter = :delayed_job
 
 end
+

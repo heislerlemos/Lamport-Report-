@@ -20,10 +20,12 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem "simple_calendar", "~> 2.0"
+gem 'mailgun-ruby', '~>1.0.2', require: 'mailgun'
 # gem 'therubyracer', platforms: :ruby
 gem 'bootstrap', '~> 4.0'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 # Use CoffeeScript for .coffee assets and views
+gem 'delayed_job_active_record'
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'devise', '~> 4.4', '>= 4.4.1'
