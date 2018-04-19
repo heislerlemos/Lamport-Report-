@@ -2,9 +2,19 @@ Rails.application.routes.draw do
   resources :eventos
   get 'calendarios/show'
   
+=begin  
   devise_for :users do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
+=end
+
+
+devise_for :users, controllers: { registrations: "users/registrations", }
+
+
+
+
+
 
 
   root 'bemvindos#index'

@@ -89,21 +89,32 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   #After deploying on heroku
-  #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+=begin
+config.action_mailer.smtp_settings = {
+   address:              'gmail.google.com',
+   port:                 587,
+   domain:               'gmail.google.com',
+   user_name:            'heisler.lemos',
+   password:             '*********',
+   authentication:       'plain',
+   enable_starttls_auto: true  
+}
+=end
 
-  config.action_mailer.delivery_method = :smtp
-  # SMTP settings for gmail
-ActionMailer::Base.smtp_settings = {
-  :port           => 587,
-  :address        => "smtp.mailgun.org",
-  :domain         => ENV['sandbox6d0e985d20d041e7b6d011f40e173a9c.mailgun.org'],
-  :user_name      => ENV['heisler.lemos@gmail.com'],
-  :password       => ENV['##########'],
-  :authentication => :plain,
-}}
+  config.action_mailer.delivery_method = :smtp 
 
-
-config.active_job.queue_adapter = :delayed_job
-
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'gmail.com',
+    user_name: 'lamportruby@gmail.com',
+    password: 'lamport1234567890',
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
 end
 
