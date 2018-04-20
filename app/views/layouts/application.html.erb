@@ -28,7 +28,7 @@
   <li class="<%= 'active' if current_page?(eventos_path) %>"><%= link_to "Eventos", eventos_path %></li>
   <li class="<%= 'active' if current_page?(new_evento_path) %>"><%= link_to "Eventos Novo", new_evento_path %></li>
   <li class="<%= 'active' if current_page?( user_session_path) %>"><%= link_to "Sign In",  user_session_path %></li>
-    <li class="<%= 'active' if current_page?(destroy_user_session_path) %>"><%= link_to :logout, destroy_user_session_path, :method => :delete  %></li>
+    <li class="<%= 'active' if current_page?(destroy_user_session_path) %>"><%= link_to :Logout, destroy_user_session_path, :method => :delete  %></li>
   </ul>
   </div>
 </nav>
@@ -42,7 +42,7 @@
      <br>
      <br>
      <br>
-      <p class="alert"> heisler.lemos ®         
+      <p class="alert">       
       <%= alert %></p>
       <small> 
       ruby 2.3.3
