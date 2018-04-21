@@ -17,7 +17,7 @@
   <div class="container">
     <p style="margin-left: -173px; margin-top: 10px;"align="right"><%= image_tag("tumblr_static_memrise_icon_tumblr.png", :alt => "logo", :size => "50x50") %></p> 
     <%= form_tag(lamport_notes_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Procura o seu relatorio" %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search" %>
       <%= submit_tag "search", class: "btn btn-primary" %>
     <% end %>
    <ul class="nav nav-tabs">
