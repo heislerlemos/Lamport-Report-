@@ -25,8 +25,8 @@
      <% lamport_note.texto %>
      </div>
   <tbody>
-     <br>
       <tr>
+        <p class="date"><%= lamport_note.created_at.strftime("%B %d, %Y") %></p>
         <td><%= link_to 'Editar', edit_lamport_note_path(lamport_note), class: "btn btn-default" %></td>
         <td><%= link_to 'Ver', lamport_note , class: "btn btn-default" %></td>
         <td><%= link_to 'Apagar', lamport_note, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger" %></td>
