@@ -2,8 +2,10 @@
 <html>
   <head>
     <title>Lamport</title>
-    <%= csrf_meta_tags %>
+    <link rel="shortcut icon" href="/home/heisler/Desktop/GIT/Lamport-Report-/public/favicon.ico"/>
 
+    <%= csrf_meta_tags %>
+    <%= favicon_link_tag 'Lamport.ico' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
@@ -15,7 +17,7 @@
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-    <p style="margin-left: -173px; margin-top: 10px;"align="right"><%= image_tag("tumblr_static_memrise_icon_tumblr.png", :alt => "logo", :size => "50x50") %></p> 
+    <p style="margin-left: -173px; margin-top: 10px;"align="right"><%= image_tag("Lamport.jpg", :alt => "logo", :size => "50x50") %></p> 
     <%= form_tag(lamport_notes_path, :method => "get", id: "search-form") do %>
   <%= text_field_tag :search, params[:search], placeholder: "Search" %>
       <%= submit_tag "search", class: "btn btn-primary" %>
