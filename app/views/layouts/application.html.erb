@@ -21,14 +21,20 @@
       <%= submit_tag "search", class: "btn btn-primary" %>
     <% end %>
    <ul class="nav nav-tabs">
-  <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Bem Vindo", root_path %></li>
-  <li class="<%= 'active' if current_page?(lamport_notes_path) %>"><%= link_to "Notas Menu", lamport_notes_path %></li>
-  <li class="<%= 'active' if current_page?(new_lamport_note_path) %>"><%= link_to "Notas Novo", new_lamport_note_path %></li>
-  <li class="<%= 'active' if current_page?(calendarios_show_path) %>"><%= link_to "Calendario", calendarios_show_path %></li>
-  <li class="<%= 'active' if current_page?(eventos_path) %>"><%= link_to "Eventos", eventos_path %></li>
-  <li class="<%= 'active' if current_page?(new_evento_path) %>"><%= link_to "Eventos Novo", new_evento_path %></li>
+   <% a = 1 %>
+   <% b = 2 %>
+   <% if user_signed_in?  then %>
+  <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Welcome", root_path %></li>
+  <li class="<%= 'active' if current_page?(lamport_notes_path) %>"><%= link_to "Note Menu", lamport_notes_path %></li>
+  <li class="<%= 'active' if current_page?(new_lamport_note_path) %>"><%= link_to "New Note", new_lamport_note_path %></li>
+  <li class="<%= 'active' if current_page?(calendarios_show_path) %>"><%= link_to "Calendar", calendarios_show_path %></li>
+  <li class="<%= 'active' if current_page?(eventos_path) %>"><%= link_to "Events", eventos_path %></li>
+  <li class="<%= 'active' if current_page?(new_evento_path) %>"><%= link_to "New Events", new_evento_path %></li>
   <!--<li class="<%= 'active' if current_page?( user_session_path) %>"><%= link_to "Sign In",  user_session_path %></li>-->
     <li class="<%= 'active' if current_page?(destroy_user_session_path) %>"><%= link_to :Logout, destroy_user_session_path, :method => :delete  %></li>
+    <% else %>
+      <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Welcome", root_path %></li>
+<% end %>
   </ul>
   </div>
 </nav>
