@@ -11,6 +11,7 @@
 <%= stylesheet_link_tag "lamport_notes", :media => "all" %>
 <br>
 <br>
+<% if user_signed_in?  then %>
 <% @lamport_notes.each do |lamport_note| %>
 <p align="left">
 <div class="col-md-4">
@@ -20,16 +21,17 @@
      <%= lamport_note.titulo %>
 
      </p>
-      <span class="glyphicon glyphicon-list-alt"></span>
+    <!--  <span class="glyphicon glyphicon-list-alt"></span>
      <div id="rectangle_form" align="center">
      <% lamport_note.texto %>
-     </div>
+     </div>-->
   <tbody>
       <tr>
+          <%= @lamport_note.user.email %>
         <p class="date"><%= lamport_note.created_at.strftime("%B %d, %Y") %></p>
-        <td><%= link_to 'Editar', edit_lamport_note_path(lamport_note), class: "btn btn-default" %></td>
-        <td><%= link_to 'Ver', lamport_note , class: "btn btn-default" %></td>
-        <td><%= link_to 'Apagar', lamport_note, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger" %></td>
+        <td><%= link_to 'Edit', edit_lamport_note_path(lamport_note), class: "btn btn-default" %></td>
+        <td><%= link_to 'Check', lamport_note , class: "btn btn-default" %></td>
+        <td><%= link_to 'Delete', lamport_note, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger" %></td>
       </tr>
   </tbody>
 </table>
@@ -38,12 +40,14 @@
 </div>
 </p>
 <% end %>
+<% end %>
 <br>
-<div class="digg_pagination" align="center">
+<br>
+<br>
+<div class="digg_pagination" align="center" style="margin-bottom: 100px;">
     <div class="page_info">
       <%= page_entries_info @lamport_notes_paginação %>
     </div>
-
         <%= will_paginate @lamport_notes_paginação  %>
 </div>
 </p>

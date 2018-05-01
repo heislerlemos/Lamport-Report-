@@ -17,7 +17,8 @@
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-    <p style="margin-left: -173px; margin-top: 10px;"align="right"><%= image_tag("Lamport.jpg", :alt => "logo", :size => "50x50") %></p> 
+    <p style="margin-left: -173px; margin-top: 10px;"align="right">
+<%= link_to image_tag("Lamport.jpg", :alt => "logo", :size => "50x50"), root_path %></p> 
     <%= form_tag(lamport_notes_path, :method => "get", id: "search-form") do %>
   <%= text_field_tag :search, params[:search], placeholder: "Search" %>
       <%= submit_tag "search", class: "btn btn-primary" %>
@@ -26,16 +27,35 @@
    <% a = 1 %>
    <% b = 2 %>
    <% if user_signed_in?  then %>
-  <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Welcome", root_path %></li>
-  <li class="<%= 'active' if current_page?(lamport_notes_path) %>"><%= link_to "Note Menu", lamport_notes_path %></li>
-  <li class="<%= 'active' if current_page?(new_lamport_note_path) %>"><%= link_to "New Note", new_lamport_note_path %></li>
-  <li class="<%= 'active' if current_page?(calendarios_show_path) %>"><%= link_to "Calendar", calendarios_show_path %></li>
-  <li class="<%= 'active' if current_page?(eventos_path) %>"><%= link_to "Events", eventos_path %></li>
-  <li class="<%= 'active' if current_page?(new_evento_path) %>"><%= link_to "New Events", new_evento_path %></li>
-  <!--<li class="<%= 'active' if current_page?( user_session_path) %>"><%= link_to "Sign In",  user_session_path %></li>-->
-    <li class="<%= 'active' if current_page?(destroy_user_session_path) %>"><%= link_to :Logout, destroy_user_session_path, :method => :delete  %></li>
+  <!--<li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Welcome", root_path %></li>-->
+    <li class="<%= 'active' if current_page?(calendarios_show_path) %>"><%= link_to "Calendar", 
+  calendarios_show_path %></li>
+    <div class="dropdown">
+  <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Notes
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <li class="<%= 'active' if current_page?(lamport_notes_path) %>"><%= link_to "Note Menu", lamport_notes_path %></li>
+    <li class="<%= 'active' if current_page?(new_lamport_note_path) %>"><%= link_to "New Note", new_lamport_note_path %></li>
+  </div>
+</div>
+  <!--<li class="<%= 'active' if current_page?(lamport_notes_path) %>"><%= link_to "Note Menu", lamport_notes_path %></li>
+  <li class="<%= 'active' if current_page?(new_lamport_note_path) %>"><%= link_to "New Note", new_lamport_note_path %></li>-->
+      <div class="dropdown">
+  <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   Events
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <li class="<%= 'active' if current_page?(eventos_path) %>"><%= link_to "Events Menu", eventos_path %></li>
+    <li class="<%= 'active' if current_page?(new_evento_path) %>"><%= link_to "New Events", new_evento_path %></li>
+  </div>
+</div>
+      <li class="<%= 'active' if current_page?(destroy_user_session_path) %>"><%= link_to :Logout, destroy_user_session_path, :method => :delete  %></li>
     <% else %>
-      <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Welcome", root_path %></li>
+  <!--<li class="<%= 'active' if current_page?(eventos_path) %>"><%= link_to "Events", eventos_path %></li>
+  <li class="<%= 'active' if current_page?(new_evento_path) %>"><%= link_to "New Events", new_evento_path %></li>-->
+  <!--<li class="<%= 'active' if current_page?( user_session_path) %>"><%= link_to "Sign In",  user_session_path %></li>-->
+     <!-- <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Welcome", root_path %></li>-->
 <% end %>
   </ul>
   </div>
@@ -44,7 +64,8 @@
   </head>
   <body>
       <%= yield %>
+      <!--
              <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <p class="alert"><%= alert %></p> -->
  </body>
 </html>

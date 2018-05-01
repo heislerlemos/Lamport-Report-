@@ -6,12 +6,14 @@ class LamportNotesController < ApplicationController
   # GET /lamport_notes.json
   def index
     #@lamport_notes = LamportNote.all.order("created_at DESC")
+    @lamport_note =  current_user.lamport_notes.build
     @lamport_notes_paginação = LamportNote.paginate(:page => params[:page], per_page: 6)
     if params[:search]
       @lamport_notes = LamportNote.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], per_page: 6)
     else
       @lamport_notes = LamportNote.all.order("created_at DESC").paginate(:page => params[:page], per_page: 6)
     end
+
   end
 
   # GET /lamport_notes/1
