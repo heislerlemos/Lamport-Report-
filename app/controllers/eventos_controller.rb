@@ -6,7 +6,15 @@ class EventosController < ApplicationController
   # GET /eventos
   # GET /eventos.json
   def index
-    @eventos = Evento.all.order("created_at DESC")
+    #@eventos = Evento.all.order("created_at DESC")
+    @evento =  current_user.eventos.build
+    @eventos_paginação = Evento.paginate(:page => params[:page], per_page: 6)
+    if params[:search]
+      @eventos= Evento.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], per_page: 6)
+    else
+      @eventos = Evento.all.order("created_at DESC").paginate(:page => params[:page], per_page: 6)
+    end
+
   end
 
   # GET /eventos/1
@@ -26,9 +34,12 @@ class EventosController < ApplicationController
   # POST /eventos
   # POST /eventos.json
   def create
-    @evento = Evento.new(evento_params)
+    #@evento = Evento.new(evento_params)
+    @evento = current_user.eventos.build(evento_params)
+
 
     respond_to do |format|
+
       if @evento.save
         format.html { redirect_to @evento, notice: 'Evento was successfully created.' }
         format.json { render :show, status: :created, location: @evento }

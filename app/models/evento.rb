@@ -1,3 +1,8 @@
 class Evento < ApplicationRecord
-#	belongs_to :user
+	belongs_to :user
+
+def self.search(search)
+where("name LIKE ?", "%#{search}%")
+end
+
 end

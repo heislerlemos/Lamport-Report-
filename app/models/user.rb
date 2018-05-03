@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :lamport_notes
-  #has_many :eventos
+  has_many :eventos
 end
