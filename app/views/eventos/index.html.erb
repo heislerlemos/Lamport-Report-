@@ -4,7 +4,14 @@
 <br>
 <br>
 <br>
+<% if user_signed_in? then%>
+  <div class="jumbotron">
+    <h1>Checks Your team Events</h1>
+    <p>Hashtag hoodie mumblecore selfies. Authentic keffiyeh leggings Kickstarter, narwhal jean shorts XOXO Vice Austin cardigan. Organic drinking vinegar freegan pickled.</p>
+    <p><%= link_to "Send as email here ", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+</div>
 
+<% end %>
 
    <ul class="
 

@@ -11,7 +11,14 @@
 <%= stylesheet_link_tag "lamport_notes", :media => "all" %>
 <br>
 <br>
-<% if user_signed_in?  then %>
+
+  <div class="jumbotron">
+    <h1>Checks Your team Notes</h1>
+    <p>Hashtag hoodie mumblecore selfies. Authentic keffiyeh leggings Kickstarter, narwhal jean shorts XOXO Vice Austin cardigan. Organic drinking vinegar freegan pickled.</p>
+    <p><%= link_to "Send a email here ", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+</div>
+
+
 <% @lamport_notes.each do |lamport_note| %>
 <p align="left">
 <div class="col-md-4">
@@ -27,7 +34,7 @@
      </div>-->
   <tbody>
       <tr>
-          <%= @lamport_note.user.email %>
+         <p> <%= @lamport_note.user.name %>  reported this ! </p>
         <p class="date"><%= lamport_note.created_at.strftime("%B %d, %Y") %></p>
         <td><%= link_to 'Edit', edit_lamport_note_path(lamport_note), class: "btn btn-default" %></td>
         <td><%= link_to 'Check', lamport_note , class: "btn btn-default" %></td>
@@ -40,7 +47,7 @@
 </div>
 </p>
 <% end %>
-<% end %>
+<
 <br>
 <br>
 <br>

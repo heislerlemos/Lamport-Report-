@@ -1,6 +1,11 @@
 class LamportNotesController < ApplicationController
   before_action :set_lamport_note, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user! #, except: [:index, :show]
+  before_action :set_current_user
+
+  def set_current_user
+    User.current_user = current_user if current_user
+  end
 
   # GET /lamport_notes
   # GET /lamport_notes.json
