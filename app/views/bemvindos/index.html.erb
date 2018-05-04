@@ -24,7 +24,12 @@
     <br>
    Lamport<br>
    <small>Report Businesss Solution </small>
-   <p style="background-color: white; border-top: solid green;  border-radius: 2px; color: white; font-size: 20px; width: 150px; "><%= link_to "Please Sign in", user_session_path %></p>
+   <p style="background-color: white; border-top: solid green;  border-radius: 2px; color: white; font-size: 20px; width: 150px; ">
+   <% if !user_signed_in? %>
+   <%= link_to "Please Sign in", user_session_path %></p> 
+   <% else %>
+  <%= link_to "    ", user_session_path %></p>
+   <% end %>
    <br>
    </h1>
       <center>

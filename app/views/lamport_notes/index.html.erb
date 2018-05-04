@@ -18,7 +18,7 @@
     <p><%= link_to "Send a email here ", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
 </div>
 
-
+<% if user_signed_in? %>
 <% @lamport_notes.each do |lamport_note| %>
 <p align="left">
 <div class="col-md-4">
@@ -26,7 +26,6 @@
    <div id="margem" align="center">
      <p style="color: white; background-color: black; border-radius: 2px;">
      <%= lamport_note.titulo %>
-
      </p>
     <!--  <span class="glyphicon glyphicon-list-alt"></span>
      <div id="rectangle_form" align="center">
@@ -34,8 +33,7 @@
      </div>-->
   <tbody>
       <tr>
-         <p> <%= @lamport_note.user.name %>  reported this ! </p>
-        <p class="date"><%= lamport_note.created_at.strftime("%B %d, %Y") %></p>
+         <p> <%= lamport_note.author %> reported this <%= time_ago_in_words(lamport_note.created_at) %> ago ! </p>
         <td><%= link_to 'Edit', edit_lamport_note_path(lamport_note), class: "btn btn-default" %></td>
         <td><%= link_to 'Check', lamport_note , class: "btn btn-default" %></td>
         <td><%= link_to 'Delete', lamport_note, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger" %></td>
@@ -47,7 +45,7 @@
 </div>
 </p>
 <% end %>
-<
+<% end %>
 <br>
 <br>
 <br>

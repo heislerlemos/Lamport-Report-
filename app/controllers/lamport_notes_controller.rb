@@ -90,6 +90,6 @@ class LamportNotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lamport_note_params
-      params.require(:lamport_note).permit(:titulo, :texto)
+      params.require(:lamport_note).permit(:titulo, :texto, :author)
     end
 end
