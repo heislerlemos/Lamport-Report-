@@ -22,19 +22,20 @@
 
       <% @eventos.each do |evento| %>
       <tr>
-<div class="col-md-4">
+<div class="col-md-2">
 <div align="center">
 <div id="containter">
 <i class="glyphicon glyphicon-list-alt"></i>
-<p style="background-color: black;">         <%= @evento.user.email %> </p>
+<!---<p style="background-color: black;">         <%= @evento.user.email %> </p>-->
+<p style="color: white; background: green; border-radius: 2px;">
+<td><%= evento.name %></td>
+</p>
 
-
-<p style="color: white; background: black; border-radius: 2px;">
-     <td><%= evento.name %><td>
+<p style="color: white; background: green; border-radius: 2px;">
       <td><%= evento.start_time %></td>
  </p>
     <tbody>
-        <%= link_to 'New Evento', new_evento_path, class: "btn btn-default" %>
+       <!-- <%= link_to 'New Evento', new_evento_path, class: "btn btn-default" %> -->
         <td><%= link_to 'Edit', edit_evento_path(evento), class: "btn btn-default" %></td>
         <td><%= link_to 'Destroy', evento, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger" %></td>
       
@@ -46,9 +47,13 @@
  <% end %>
 <% end %>
 </p>
-
 <br>
-<div class="digg_pagination" align="center" style="margin-bottom: 100px;">
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="digg_pagination" align="center" style="margin-top: 150px;">
     <div class="page_info">
       <%= page_entries_info @eventos_paginação %>
     </div>
