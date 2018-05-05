@@ -8,12 +8,12 @@
   <div class="jumbotron">
     <h1>Checks Your team Events</h1>
     <p>Hashtag hoodie mumblecore selfies. Authentic keffiyeh leggings Kickstarter, narwhal jean shorts XOXO Vice Austin cardigan. Organic drinking vinegar freegan pickled.</p>
-    <p><%= link_to "Send as email here ", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+    <p><%= link_to "Chat whit us here !", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
 </div>
 
 <% end %>
 
-   <ul class="
+
 
 <p id="notice"><%= notice %></p>
 <%= stylesheet_link_tag "eventos", :media => "all" %>
@@ -22,7 +22,6 @@
 
       <% @eventos.each do |evento| %>
       <tr>
-<div class="col-md-2">
 <div align="center">
 <div id="containter">
 <i class="glyphicon glyphicon-list-alt"></i>
@@ -35,13 +34,13 @@
       <td><%= evento.start_time %></td>
  </p>
     <tbody>
+        <%= link_to 'Show', evento, class: "btn btn-primary" %> 
        <!-- <%= link_to 'New Evento', new_evento_path, class: "btn btn-default" %> -->
-        <td><%= link_to 'Edit', edit_evento_path(evento), class: "btn btn-default" %></td>
-        <td><%= link_to 'Destroy', evento, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger" %></td>
+        <!--<td><%= link_to 'Edit', edit_evento_path(evento), class: "btn btn-default" %></td>
+        <td><%= link_to 'Destroy', evento, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger" %></td>-->
       
       </tr>
 </div> 
-</div>
 </div>
   </tbody>
  <% end %>
@@ -53,10 +52,11 @@
 <br>
 <br>
 <br>
+</div>
 <div class="digg_pagination" align="center" style="margin-top: 150px;">
     <div class="page_info">
       <%= page_entries_info @eventos_paginação %>
     </div>
         <%= will_paginate @eventos_paginação  %>
-</div>
+
 

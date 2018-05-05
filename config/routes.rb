@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :eventos
+  resources :eventos  do
+  	resources :item_events
+  end
+
   get 'calendarios/show'
   
 =begin  

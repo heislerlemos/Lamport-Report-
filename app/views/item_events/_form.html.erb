@@ -1,0 +1,5 @@
+<%= form_for([@evento, @evento.item_event.build]) do |h|  %>
+
+<%= h.text_field :content, placeholder: "New Event" %>
+<%= h.submit %>
+<% end %>

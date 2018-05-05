@@ -1,5 +1,19 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <p id="notice"><%= notice %></p>
-
+ <div class="field"  style="color: black; border-radius: 4px; background-color: white; width: 700px;   position:absolute;  top:50%; left:25%; margin-left: -5px; border: solid black 2px; margin-top:-200px; box-shadow: 4px 9px " align="center">
 <p>
   <strong>Name:</strong>
   <%= @evento.name %>
@@ -10,5 +24,13 @@
   <%= @evento.start_time %>
 </p>
 
-<%= link_to 'Edit', edit_evento_path(@evento) %> |
-<%= link_to 'Back', eventos_path %>
+<div id="item_event_wrapper">
+<%= render @evento.item_event %>
+<div id="form">
+<%= render "item_events/form" %>
+</div>
+</div>
+
+<%= link_to 'Edit', edit_evento_path(@evento), class: "btn btn-sm btn-primary" %> |
+<%= link_to 'Back', eventos_path , class: "btn-sm btn btn-danger"%>
+</div>
