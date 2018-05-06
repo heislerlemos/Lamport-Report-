@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :eventos  do
-  	resources :item_events
+  	resources :item_events do
+      member do 
+        patch :completo
+      end
+    end
   end
 
   get 'calendarios/show'

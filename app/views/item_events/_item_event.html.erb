@@ -1,4 +1,33 @@
 <p><%= item_event.content%></p>
 
-<%= link_to "Delete", evento_item_event_path(@evento, item_event.id), method: :delete, data: { confirm: "Are you sure ?"} %>
+<div class="row clearfix">
 
+<% if item_event.completed? %>
+
+<div  class="complete">
+<%= link_to "Mark as completed", completo_evento_item_event_path(@evento, item_event.id), method: :patch , class: "btn btn-sm btn-primary" %>
+</div>
+
+<div class="todo_item">
+<p style="opacity: 0.4;"><strike><%= item_event.content%></strike></p>
+</div>
+
+<div class="trash">
+<%= link_to "Delete", evento_item_event_path(@evento, item_event.id), method: :delete, data: { confirm: "Are you sure ?"}, class: "btn btn-sm btn-danger" %>
+</div>
+
+<% else %>
+
+<div  class="complete">
+<%= link_to "Mark as completed", completo_evento_item_event_path(@evento, item_event.id), method: :patch , class: "btn btn-sm btn-primary" %>
+</div>
+
+<div class="todo_item">
+<p><%= item_event.content%></p>
+</div>
+
+<div class="trash">
+<%= link_to "Delete", evento_item_event_path(@evento, item_event.id), method: :delete, data: { confirm: "Are you sure ?"}, class: "btn btn-sm btn-danger" %>
+</div>
+<% end %>
+</div>

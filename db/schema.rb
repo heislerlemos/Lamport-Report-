@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180505191110) do
+ActiveRecord::Schema.define(version: 20180506135048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 20180505191110) do
     t.bigint "evento_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "completed_at"
+    t.datetime "completo_em"
     t.index ["evento_id"], name: "index_item_events_on_evento_id"
   end
 
