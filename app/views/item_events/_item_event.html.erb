@@ -1,33 +1,48 @@
-<p><%= item_event.content%></p>
-
-<div class="row clearfix">
+<%= stylesheet_link_tag "item_events", :media => "all" %>
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<p><% item_event.content%></p>
 
 <% if item_event.completed? %>
+ <table style="width:90%; margin-left: 20px;  border-bottom: solid green 2px; background-color: purple; color: white; font-family: monospace; opacity: 0.6; border-radius: 1px; border-spacing: 5px; text-align: center;" >
+ <tr>
+ <th>
+<%= link_to completo_evento_item_event_path(@evento, item_event.id), method: :patch  do %>
+	<i style="opacity: 0.7;" class="fa fa-check fa-2x" align="right"></i>
+<% end %>
+</th>
 
-<div  class="complete">
-<%= link_to "Mark as completed", completo_evento_item_event_path(@evento, item_event.id), method: :patch , class: "btn btn-sm btn-primary" %>
-</div>
+<th>
+<p style="opacity: 0.4; font-size: 20px;" align="center"><strike style="color: white"><%= item_event.content%></strike></p>
+</th>
 
-<div class="todo_item">
-<p style="opacity: 0.4;"><strike><%= item_event.content%></strike></p>
-</div>
-
-<div class="trash">
-<%= link_to "Delete", evento_item_event_path(@evento, item_event.id), method: :delete, data: { confirm: "Are you sure ?"}, class: "btn btn-sm btn-danger" %>
-</div>
+<th>
+<%= link_to evento_item_event_path(@evento, item_event.id), method: :delete, data: { confirm: "Are you sure ?"} do %>
+	<i class="fa fa-trash fa-2x" ></i>
+	<% end %>
+</th>
+</tr>
+</table>
 
 <% else %>
 
-<div  class="complete">
-<%= link_to "Mark as completed", completo_evento_item_event_path(@evento, item_event.id), method: :patch , class: "btn btn-sm btn-primary" %>
-</div>
-
-<div class="todo_item">
-<p><%= item_event.content%></p>
-</div>
-
-<div class="trash">
-<%= link_to "Delete", evento_item_event_path(@evento, item_event.id), method: :delete, data: { confirm: "Are you sure ?"}, class: "btn btn-sm btn-danger" %>
-</div>
+ <table style="width:90%; margin-left: 20px;  border-bottom: solid green 2px; background-color: purple; color: white; font-family: monospace; border-radius: 1px; border-spacing: 5px; text-align: center;" >
+ <tr>
+<tr>
+<th>
+<%= link_to completo_evento_item_event_path(@evento, item_event.id), method: :patch  do %>
+	<i class="fa fa-check fa-2x"></i>
 <% end %>
-</div>
+</th>
+
+<th>
+<p style="font-size: 20px;" align="center"><%= item_event.content%></p>
+</th>
+
+<th>
+<%= link_to evento_item_event_path(@evento, item_event.id), method: :delete, data: { confirm: "Are you sure ?"} do %>
+	<i class="fa fa-trash fa-2x"></i>
+<% end %>
+</th>
+</tr>
+<% end %>
+</table>

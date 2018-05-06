@@ -1,5 +1,6 @@
+<p style="margin-top: 10px;">
 <%= form_for([@evento, @evento.item_event.build]) do |h|  %>
-
-<%= h.text_field :content, placeholder: "New Event" %>
-<%= h.submit %>
+<%= h.text_field :content, placeholder: "New Event"%>
+<%= h.submit class: "btn btn-primary"  %>
 <% end %>
+</p>
