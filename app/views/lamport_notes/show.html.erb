@@ -34,8 +34,15 @@
   <p align="center" style="color: white; background: black; width: 199px; border-radius: 1px;">
   <p>
   <p align="center">
-  <%= link_to 'Edit', edit_lamport_note_path(@lamport_note), class: "btn btn-default" %> |
-  <%= link_to 'Back', lamport_notes_path, class: "btn btn-default" %>
+
+  <%= link_to edit_lamport_note_path(@lamport_note) do %> 
+  <i class="fas fa-edit fa-2x" style="color: black;"></i>
+  <% end %>
+
+  <%= link_to lamport_notes_path do  %>
+  <i class="fas fa-undo-alt fa-2x" style="color: black;"></i>
+  <% end %>
+
   </p>
 </div>
 </div>

@@ -15,7 +15,7 @@
   <div class="jumbotron">
     <h1>Checks Your team Notes</h1>
     <p>Hashtag hoodie mumblecore selfies. Authentic keffiyeh leggings Kickstarter, narwhal jean shorts XOXO Vice Austin cardigan. Organic drinking vinegar freegan pickled.</p>
-    <p><%= link_to "Chat whit us here !", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+    <p><%= link_to "Create a Note !", new_lamport_note_path, class: "btn btn-primary btn-lg" %></p>
 </div>
 
 <% if user_signed_in? %>
@@ -33,8 +33,8 @@
      </div>-->
   <tbody>
       <tr>
-         <p> <%= lamport_note.author %> reported this <%= time_ago_in_words(lamport_note.created_at) %> ago ! </p>
-        <td><%= link_to edit_lamport_note_path(lamport_note) do %>
+         <p><%= lamport_note.author %> reported this <%= time_ago_in_words(lamport_note.created_at) %> ago ! </p>
+        <td style="margin-left: 55px;"><%= link_to edit_lamport_note_path(lamport_note) do %>
         <i class="fas fa-edit fa-2x" style="color: black;"></i>
         <% end %>
         </td>
