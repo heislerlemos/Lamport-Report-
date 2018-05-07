@@ -3,24 +3,25 @@
 <p><% item_event.content%></p>
 
 <% if item_event.completed? %>
- <table style="width:90%; margin-left: 20px;  border-bottom: solid green 2px; background-color: purple; color: white; font-family: monospace; opacity: 0.6; border-radius: 1px; border-spacing: 5px; text-align: center;" >
+ <table style="width:90%; margin-left: 20px;  border-bottom: solid green 2px; background-color: purple; color: white; font-family: monospace; border-radius: 1px; border-spacing: 5px; text-align: center;" >
  <tr>
  <th>
 <%= link_to completo_evento_item_event_path(@evento, item_event.id), method: :patch  do %>
-	<i style="opacity: 0.7;" class="fa fa-check fa-2x" align="right"></i>
+	<i style="margin-right: 100%; opacity: 0.7;" class="fa fa-check fa-2x"></i>
 <% end %>
 </th>
 
 <th>
-<p style="opacity: 0.4; font-size: 20px;" align="center"><strike style="color: white"><%= item_event.content%></strike></p>
+<strike style="color: white; opacity: 0.4; font-size: 20px; margin-right: 400px; text-align: center;"><%= item_event.content%></strike>
 </th>
 
 <th>
 <%= link_to evento_item_event_path(@evento, item_event.id), method: :delete, data: { confirm: "Are you sure ?"} do %>
-	<i class="fa fa-trash fa-2x" ></i>
-	<% end %>
+	<i class="fa fa-trash fa-2x" style="margin-right: 16%;"></i>
+	<% end %>	
 </th>
 </tr>
+
 </table>
 
 <% else %>
@@ -30,17 +31,19 @@
 <tr>
 <th>
 <%= link_to completo_evento_item_event_path(@evento, item_event.id), method: :patch  do %>
-	<i class="fa fa-check fa-2x"></i>
+	<i class="fa fa-check fa-2x " style="margin-right: 100%;"></i>
 <% end %>
 </th>
 
 <th>
-<p style="font-size: 20px;" align="center"><%= item_event.content%></p>
+<center>
+<i style="font-size: 20px; margin-right: 400px; text-align: center;"><%= item_event.content%></i>
+</center>
 </th>
 
 <th>
 <%= link_to evento_item_event_path(@evento, item_event.id), method: :delete, data: { confirm: "Are you sure ?"} do %>
-	<i class="fa fa-trash fa-2x"></i>
+	<i class="fa fa-trash fa-2x" style="margin-right: 16%;"></i>
 <% end %>
 </th>
 </tr>
