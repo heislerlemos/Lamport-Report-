@@ -24,7 +24,7 @@
 <div class="col-md-4">
 <div id="alinhamento">
    <div id="margem" align="center">
-     <p style="color: white; background-color: black; border-radius: 2px;">
+     <p style="color: black; font-size: 22px; font-family: monospace; border-radius: 2px;">
      <%= lamport_note.titulo %>
      </p>
     <!--  <span class="glyphicon glyphicon-list-alt"></span>
@@ -34,9 +34,18 @@
   <tbody>
       <tr>
          <p> <%= lamport_note.author %> reported this <%= time_ago_in_words(lamport_note.created_at) %> ago ! </p>
-        <td><%= link_to 'Edit', edit_lamport_note_path(lamport_note), class: "btn btn-default" %></td>
-        <td><%= link_to 'Check', lamport_note , class: "btn btn-default" %></td>
-        <td><%= link_to 'Delete', lamport_note, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger" %></td>
+        <td><%= link_to edit_lamport_note_path(lamport_note) do %>
+        <i class="fas fa-edit fa-2x" style="color: black;"></i>
+        <% end %>
+        </td>
+        <td><%= link_to lamport_note do  %>
+        <i class="fas fa-eye fa-2x" style="color: black;"></i>
+        <% end %>
+        </td>
+        <td><%= link_to lamport_note, method: :delete, data: { confirm: 'Are you sure?' }  do%>
+          <i class="fas fa-trash fa-2x" style="color: black;"></i>
+          <% end %>
+        </td>
       </tr>
   </tbody>
 </table>

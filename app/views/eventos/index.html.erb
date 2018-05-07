@@ -4,6 +4,8 @@
 <br>
 <br>
 <br>
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet"> 
 <% if user_signed_in? then%>
   <div class="jumbotron">
     <h1>Checks Your team Events</h1>
@@ -22,25 +24,31 @@
 
       <% @eventos.each do |evento| %>
       <tr>
+<div class="col-md-2">      
 <div align="center">
 <div id="containter">
-<i class="glyphicon glyphicon-list-alt"></i>
-<!---<p style="background-color: black;">         <%= @evento.user.email %> </p>-->
-<p style="color: white; background: green; border-radius: 2px;">
-<td><%= evento.name %></td>
+<i class="fas fa-list-alt  fa-4x" style="color: white;"></i>
+<p style="margin-top: 20px;">
+ <%= link_to evento, method: :delete, data: { confirm: 'Are you sure?' } do  %>
+<i class="fas fa-trash fa-2x" style="color: black;"></i>
+ <% end %>
+ </p>
+<p style="color: black; font-size: 15px; font-family: 'Alfa Slab One', cursive; border-radius: 2px; width: 100px; border: solid black 1px; background-color: white;">
+<%= link_to "#{evento.name}" , evento %>
 </p>
-
-<p style="color: white; background: green; border-radius: 2px;">
-      <td><%= evento.start_time %></td>
+  
+<p style="color: white; background: black; border-radius: 2px;">
+      <td><% evento.start_time %></td>
  </p>
     <tbody>
-        <%= link_to 'Show', evento, class: "btn btn-primary" %> 
+        <% link_to 'Show', evento, class: "btn btn-primary" %> 
        <!-- <%= link_to 'New Evento', new_evento_path, class: "btn btn-default" %> -->
-        <!--<td><%= link_to 'Edit', edit_evento_path(evento), class: "btn btn-default" %></td>
-        <td><%= link_to 'Destroy', evento, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger" %></td>-->
+        <!--<td><%= link_to 'Edit', edit_evento_path(evento), class: "btn btn-default" %></td>-->
+       </td>
       
       </tr>
 </div> 
+</div>
 </div>
   </tbody>
  <% end %>

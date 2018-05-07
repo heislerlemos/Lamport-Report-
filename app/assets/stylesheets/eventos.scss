@@ -9,12 +9,14 @@ body {
 
 
 #containter {
-	margin-left: 50px;
-	width: 500px;
-	height: 120px;
+	margin-left: 2px;
+	width: 150px;
+	height: 150px;
 	color: white;
-      border: 1px solid black;
 	border-radius: 3px;
 	padding: 1em;
 	background-color: lightblue;
+	border: solid black 1px;
+	box-shadow: 12px 19px;
+	margin-bottom: 10px;
 }
