@@ -12,11 +12,11 @@ class LamportNotesController < ApplicationController
   def index
     #@lamport_notes = LamportNote.all.order("created_at DESC")
     @lamport_note =  current_user.lamport_notes.build
-    @lamport_notes_paginação = LamportNote.paginate(:page => params[:page], per_page: 6)
+    @lamport_notes_paginação = LamportNote.paginate(:page => params[:page], per_page: 3)
     if params[:search]
-      @lamport_notes = LamportNote.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], per_page: 6)
+      @lamport_notes = LamportNote.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], per_page: 3)
     else
-      @lamport_notes = LamportNote.all.order("created_at DESC").paginate(:page => params[:page], per_page: 6)
+      @lamport_notes = LamportNote.all.order("created_at DESC").paginate(:page => params[:page], per_page: 3)
     end
 
   end

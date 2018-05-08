@@ -14,19 +14,18 @@
   <% end %>
 
 <div id="new_formula">
-  <div class="field" align="center">
-    <% form.label :titulo %>
-    <%= form.text_field :titulo, id: :lamport_note_titulo, :size =>  "58" %>
+    <div class="field" align="center">
+    <%= form.label :author %>
+    <%= form.text_field :author, id: :lamport_note_author, :size =>  "70" %>
   </div>
   <br>
     <div class="field" align="center">
-    <% form.label :author %>
-    <%= form.text_field :author, id: :lamport_note_author, :size =>  "10" %>
+    <%= form.label :titulo %>
+    <%= form.text_field :titulo, id: :lamport_note_titulo, :size =>  "70" %>
   </div>
-
   <br>
   <div class="field" align="center">
-    <% form.label :texto %>
+    <%= form.label :texto %>
     <%= form.text_area :texto, id: :lamport_note_texto, cols: 70, rows: 10 %>
   </div>
   <br>

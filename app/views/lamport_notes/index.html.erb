@@ -24,31 +24,31 @@
 <div class="col-md-4">
 <div id="alinhamento">
    <div id="margem" align="center">
-     <p style="color: black; font-size: 22px; font-family: monospace; border-radius: 2px;">
+     <p style="color: black; font-size: 22px; font-family: monospace; border-radius: 2px; word-wrap: break-word;">
      <%= lamport_note.titulo %>
      </p>
     <!--  <span class="glyphicon glyphicon-list-alt"></span>
      <div id="rectangle_form" align="center">
      <% lamport_note.texto %>
      </div>-->
-  <tbody>
-      <tr>
-         <p><%= lamport_note.author %> reported this <%= time_ago_in_words(lamport_note.created_at) %> ago ! </p>
-        <td style="margin-left: 55px;"><%= link_to edit_lamport_note_path(lamport_note) do %>
+  
+      
+         <p style="word-wrap: break-word;"><%= lamport_note.author %> reported this <%= time_ago_in_words(lamport_note.created_at) %> ago ! </p>
+
+        <p style="margin-right: 100px; margin-bottom: -30px;"><%= link_to edit_lamport_note_path(lamport_note) do %>
         <i class="fas fa-edit fa-2x" style="color: black;"></i>
         <% end %>
-        </td>
-        <td><%= link_to lamport_note do  %>
+        </p>
+
+        <p style="margin-bottom: 100px; "><%= link_to lamport_note do  %>
         <i class="fas fa-eye fa-2x" style="color: black;"></i>
         <% end %>
-        </td>
-        <td><%= link_to lamport_note, method: :delete, data: { confirm: 'Are you sure?' }  do%>
+        </p>
+
+        <p style="margin-left: 100px; margin-top: -130px;"><%= link_to lamport_note, method: :delete, data: { confirm: 'Are you sure?' }  do%>
           <i class="fas fa-trash fa-2x" style="color: black;"></i>
           <% end %>
-        </td>
-      </tr>
-  </tbody>
-</table>
+        </p>
 </div>
 </div>
 </div>
