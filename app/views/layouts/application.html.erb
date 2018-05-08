@@ -23,12 +23,12 @@
 
 <% if current_page? lamport_notes_path %> 
     <%= form_tag(lamport_notes_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search Notes" %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Notes", size:  "70" %>
       <%= submit_tag "search", class: "btn btn-primary" %>
     <% end %>
 <% elsif current_page? eventos_path %>
     <%= form_tag(eventos_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search Events" %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Events", size:  "70" %>
       <%= submit_tag "search", class: "btn btn-primary" %>
     <% end %>
 <% end %>
