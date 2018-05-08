@@ -1,0 +1,4 @@
+<%= div_for twitterpost do %>
+<p><b>Posted <%= time_ago_in_words(twitterpost.created_at) %> ago</b></p>
+<p><%=  twitterpost.message %></p>
+<% end %>

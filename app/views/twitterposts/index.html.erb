@@ -1,0 +1,27 @@
+<%= stylesheet_link_tag "twitterposts", :media => "all" %>
+
+  <div class="jumbotron">
+    <h1>Checks Your team workflow message board</h1>
+    <p>Hashtag hoodie mumblecore selfies. Authentic keffiyeh leggings Kickstarter, narwhal jean shorts XOXO Vice Austin cardigan. Organic drinking vinegar freegan pickled.</p>
+    <p><%= link_to "Back to  Notes !", lamport_notes_path, class: "btn btn-primary btn-lg" %></p>
+</div>
+
+
+
+
+<%= render :partial => 'message_form' %>
+
+<div id="twitterposts">
+<%= render :partial => @twitterposts %>	
+</div>
+
+
+<div class="digg_pagination" align="center" style="margin-bottom: 100px; " >
+    
+    <div class="page_info" align="left">
+      <%= page_entries_info @twitterposts_paginação %> 
+      <%= will_paginate @twitterposts_paginação  %>
+
+    </div>
+</div>
+ 

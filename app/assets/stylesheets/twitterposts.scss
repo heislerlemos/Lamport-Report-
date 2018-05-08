@@ -1,0 +1,30 @@
+// Place all the styles related to the twitterposts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body
+{
+  font-family: tahoma, sans-serif;
+  font-size: 18px;
+ /** background-color: #4B7399;**/
+  width: 100%;
+  color: black;
+ margin: 0;
+  text-align: center;
+}
+
+#content
+{
+  width: 800px;
+  margin: 0 auto; 
+  text-align: left;
+}
+
+.twitterpost
+{
+  padding: 5px 20px 5px 20px;
+  background-color: #4B7399;
+  margin: 20px 0 20px 0;
+  color: white;
+} 
