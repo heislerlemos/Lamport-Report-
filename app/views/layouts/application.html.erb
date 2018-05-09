@@ -60,6 +60,7 @@
     <li class="<%= 'active' if current_page?(new_evento_path) %>"><%= link_to "New Events", new_evento_path %></li>
   </div>
 </div>
+       <li class="<%= 'active' if current_page?(edit_user_registration_path) %>"><%= link_to "Settings", edit_user_registration_path %>
       <li class="<%= 'active' if current_page?(destroy_user_session_path) %>"><%= link_to :Logout, destroy_user_session_path, :method => :delete  %></li>
     <% else %>
   <!--<li class="<%= 'active' if current_page?(eventos_path) %>"><%= link_to "Events", eventos_path %></li>
