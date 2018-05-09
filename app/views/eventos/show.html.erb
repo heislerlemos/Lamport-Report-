@@ -16,12 +16,12 @@
 <p id="notice"><%= notice %></p>
  <div class="field"  style="color: black; border-radius: 4px; background-color: white; width: 900px;   position:absolute;  top:50%; left:15%; margin-left: -5px; border: solid black 2px; margin-top:-200px; box-shadow: 4px 9px; " align="center">
 <p>
-  <strong>Name:</strong>
+  <strong style="font-size: 25px;">Event</strong><br>
   <%= @evento.name %>
 </p>
 
 <p>
-  <strong>Start time:</strong>
+  <strong style="font-size: 25px;">Deadline:</strong><br>		
   <%= @evento.start_time %>
 </p>
 
@@ -32,9 +32,11 @@
 </div>
 </div>
 
-<%= link_to 'Edit', edit_evento_path(@evento), class: "btn btn-sm btn-primary" %> |
-<%= link_to 'Back', eventos_path , class: "btn-sm btn btn-danger"%>
-<%= link_to  @evento, method: :delete, data: { confirm: 'Are you sure?' } do %>
-<i class="fa fa-trash-o" aria-hidden="true"></i>
+<%= link_to edit_evento_path(@evento) do  %>
+ <i class="fas fa-edit fa-2x" style="color: black;"></i> 
+<% end %>
+
+<%= link_to eventos_path do %>
+<i class="fas fa-undo-alt fa-2x" style="color: black; margin-left: 700px; "></i>
 <% end %>
 </div>
