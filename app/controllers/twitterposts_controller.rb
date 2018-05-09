@@ -1,5 +1,5 @@
 class TwitterpostsController < ApplicationController
-
+   before_action :authenticate_user!
   def index
     @twitterposts = Twitterpost.all.order("created_at DESC")
     @twitterposts_paginação = Twitterpost.paginate(:page => params[:page], per_page: 10)
