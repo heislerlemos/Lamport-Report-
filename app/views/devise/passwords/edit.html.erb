@@ -1,5 +1,6 @@
 <h2>Change your password</h2>
 <div class="field"  style="color: black; border-radius: 4px; background-color: white; width: 700px;   position:absolute;  top:50%; left:25%; margin-left: -5px; border: solid black 2px; margin-top:-200px; box-shadow: 4px 9px " align="center">
+
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
   <%= f.hidden_field :reset_password_token %>
@@ -16,7 +17,6 @@
     <%= f.label :password_confirmation, "Confirm new password" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
-
   <div class="actions">
     <%= f.submit "Change my password" %>
   </div>
