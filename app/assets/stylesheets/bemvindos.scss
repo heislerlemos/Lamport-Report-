@@ -6,7 +6,10 @@
 
 body {
 
-
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; 
   
 }
 
@@ -42,6 +45,10 @@ background: url('background-city.png') no-repeat;
     margin-left: 900px;
    margin-bottom: 300px; 
    /**position: fixed;**/
+   -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; 
   }
 
 .wrapper {  
