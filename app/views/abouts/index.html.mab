@@ -1,0 +1,39 @@
+
+ 
+def markaby(&block)
+  Markaby::Builder.new({}, self, &block).to_s
+end
+ 
+
+
+def stylesheet_link_tag(src)
+  %{<link href="#{src}" type="text/css" rel="stylesheet" />}
+end
+action_name = "About Page"
+flash = {:notice => "Hey There"}
+content_for_layout = "Here's some content"
+ 
+html = markaby do
+  html do
+    head do
+      title action_name
+      stylesheet_link_tag 'abouts'
+    end
+ 
+    body do
+     #h1.style ("font-size: 540px;  height: 400px; weight: 100px; border: solid black 1px ;")	
+     6.times do br
+     end
+     h1 ("hello")
+     h3 ("teste teste teste teste")
+     h5 ("kddkldkdldkdkkdkdncn cmndkndjndjndjfnjfnjnfkjdnfndf
+     	dlkfdkkfkldmfkldlnmfldnmfklnmdlknfldnlfndkldkmnfndkj
+     	dkfdmklfmldkmflndlfnlkdnflkndlnfldnflndlnfldnlfndlnfldlfn")
+      p flash[:notice], :style => "color: green"
+      self << content_for_layout
+    end
+  end
+end
+ 
+puts html
+puts "Your about page is here !!"
