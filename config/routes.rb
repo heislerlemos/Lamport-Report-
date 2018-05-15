@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'abouts/index'
+
   resources :eventos  do
   	resources :item_events do
       member do 
