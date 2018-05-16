@@ -33,7 +33,9 @@ html = markaby do
      	   butcher, ramps vinyl skateboard direct trade next level artisan poke.")
      3.times do br
      end
-     
+     p (""), :style => ("border-top: 1px solid black;")
+     2.times do br
+     end
      p ("Lorem ipsum dolor amet quinoa cornhole godard ugh tote bag, VHS brooklyn flannel small batch. 90's etsy umami williamsburg disrupt, raw denim vegan coloring book activated charcoal freegan cold-pressed XOXO hashtag. Cred meh shoreditch pork belly deep v kitsch. Food truck literally portland jianbing gochujang, kinfolk vegan. Drinking vinegar YOLO meh next level. Ugh drinking vinegar succulents tilde, edison bulb glossier bicycle rights retro raw denim. Stumptown beard ramps mlkshk narwhal taiyaki.
 
 Quinoa waistcoat pop-up disrupt master cleanse man bun. YOLO raclette you probably haven't heard of them biodiesel occupy brooklyn. Lyft echo park cliche scenester shoreditch. Whatever gastropub crucifix blue bottle plaid.
@@ -43,11 +45,14 @@ Cold-pressed tote bag edison bulb kogi fam green juice. Tousled typewriter mumbl
      
      1.times do br
      end
-      ul  do 
-      	li ("Twitter")	
-      	li ("Facebook")
-      	li ("Github")
-        li ("Gmail")
+       ul  do 
+        a  ("Apple"), :href => ("https://www.apple.com") do
+           img  :sorce => "" 
+        end
+      	a ("Twitter"), :href => ("https://twitter.com")
+      	a ("Facebook"), :href => ("https://www.facebook.com")
+      	a ("Github"), :href => ("https://github.com")
+        a ("Gmail"), :href => ("")
       end     
     end
   end
