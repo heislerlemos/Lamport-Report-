@@ -28,9 +28,10 @@ html = markaby do
      3.times do br
      end
 
-     p ("Lucas , Micheal and Zoey made lamport in the year 2018 ...
-     	   Actually post-ironic bespoke pork belly hell of stumptown air plant slow-carb cloud bread live-edge small batch pickled. Shaman readymade vegan cred brooklyn. Wayfarers farm-to-table actually, brunch pug stumptown poutine hoodie thundercats fanny pack aesthetic tumblr. Kitsch salvia master cleanse ennui shoreditch, ethical photo booth viral succulents bicycle rights vegan heirloom scenester +1 letterpress. Leggings etsy 3 wolf moon gentrify brunch letterpress taiyaki humblebrag farm-to-table typewriter mumblecore kogi pop-up chicharrones. Jianbing slow-carb la croix, brooklyn forage hashtag blog air plant. Gentrify coloring book 
-     	   butcher, ramps vinyl skateboard direct trade next level artisan poke.")
+     p  ("Lucas , Micheal and Zoey made lamport in the year 2018 ...
+     	   Ad direct trade next level artisan poke.
+         , Micheal and Zoey made lamport in the year 2018"), :style => "border: solid black 1px; box-shadow: 6px 3px; margin-left: 5px; font-family: 'Raleway', sans-serif;  font-size: 17px; background-color: white; color: black; " 
+     p ("ucas , Micheal and Zoey made lamport in the year 2018 ...")
      3.times do br
      end
      p (""), :style => ("border-top: 1px solid black;")
@@ -45,19 +46,18 @@ Cold-pressed tote bag edison bulb kogi fam green juice. Tousled typewriter mumbl
      
      1.times do br
      end
-       ul  do 
-        a  ("Apple"), :href => ("https://www.apple.com") do
-           img  :sorce => "" 
-        end
-      	a ("Twitter"), :href => ("https://twitter.com")
-      	a ("Facebook"), :href => ("https://www.facebook.com")
-      	a ("Github"), :href => ("https://github.com")
-        a ("Gmail"), :href => ("")
-      end     
+     div.icons! :align => "center"  do  
+      a :href => ("https://www.apple.com") do 
+       img :src => ("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/768px-Apple_logo_black.svg.png"), :height => ("35"), :width => ("35")
+     end
+        a :href => ("https://twitter.com/") do 
+       img :src => ("http://communicasound.com/wp-content/uploads/2017/02/Twitter-Logo-PNG-1.png"), :height => ("35"), :width => ("35")
+     end 
+   end
     end
   end
 end
 
 
 puts html
-puts "Your about page is here !!"
+puts "Your about page is here !!" 
