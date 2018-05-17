@@ -3,10 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+body {
+	background-color:  green; 
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
 
-
-
-.test {
-  background-color: tomato;
-
+p {
+	background-color: purple;
 }
