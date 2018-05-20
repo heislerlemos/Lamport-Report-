@@ -1,0 +1,100 @@
+body {
+color: black;
+}
+
+
+.title {
+	color: white;
+	font-size: 200px;
+
+}
+
+
+.field_one  {
+
+  color: white;
+  display: grid;
+  grid-template-columns: 400px 200px 400px;
+  grid-auto-rows: 180px;
+  grid-gap: 40px;
+  position: absolute;
+  left: 145px;
+  border-bottom: solid rgb(2.4, 1.6, 1.6, 0.2) 10px;
+  box-shadow: 4px 9px; 
+
+}
+
+.field_item_one {	
+	    height: auto;
+	        background-image: url('https://www.mydoorsign.com/blog/wp-content/uploads/2014/05/green-building1.jpg');
+        background-size: 100% 100%;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;  
+
+}
+	
+.field_item_two {
+	background-color: tomato;
+		        background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/65/Brownsville_Herald_Newspaper.jpg');
+        background-size: 100% 100%;
+
+}
+
+
+.field_item_three {
+	background-color: #E37222;
+		height: auto;
+    background-image: url('http://static2.businessinsider.com/image/54469530eab8eae223d108c7/i-took-an-online-coding-class-and-now-i-have-a-huge-appreciation-for-what-programmers-do-all-day.jpg');
+        background-size: 100% 100%;
+  color: white;
+  font-size: 24px;
+      position: relative;
+
+}
+
+.field_item_forth {
+	background-color: #66B9BF;
+	background-image: url('https://i.pinimg.com/originals/7e/fe/07/7efe079bcd1ef996475c142dc62f3a00.jpg');
+        background-size: 100% 100%;
+}
+
+
+.field_item_fifth {
+	background-color: black;
+					        background-image: url('http://www.gomma.de/blog/wp-content/uploads/2012/09/Wiredx-02-12-no1_e.jpg');
+        background-size: 100% 100%;
+
+
+}
+
+.field_item_six {
+	background-color: green;
+					        background-image: url('http://battellemedia.com/wp-content/uploads/2015/06/wework-fidi-1.jpg');
+        background-size: 100% 100%;
+}
+
+.field_item_siven {
+	background-color: grey;
+}
+
+.field_item_eight {
+	background-color: pink;
+}
+	
+.field_item_nine  {
+	background-color: blue;
+}
+
+.bottomright {
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    font-size: 18px;
+    font-family: monospace;
+    background-color: white;
+    color: white;
+    background: rgb(2.4, 1.6, 1.6, 0.8);
+    border-radius: 1px;
+}

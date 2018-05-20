@@ -14,6 +14,7 @@ Rails.application.config.assets.precompile += %w( calendarios.css )
 Rails.application.config.assets.precompile += %w( item_events.css )
 Rails.application.config.assets.precompile += %w( twitterposts.css )
 Rails.application.config.assets.precompile += %w( abouts.css )
+Rails.application.config.assets.precompile += %w( news.css )
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.

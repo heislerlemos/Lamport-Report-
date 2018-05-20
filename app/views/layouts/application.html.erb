@@ -59,6 +59,7 @@
     <li class="<%= 'active' if current_page?( abouts_index_path) %>"><%= link_to "Abouts", abouts_index_path %></li>
   </div>
 </div>
+        <li class="<%= 'active' if current_page?(news_index_path) %>"><%= link_to "News", news_index_path %></li>
        <li class="<%= 'active' if current_page?(edit_user_registration_path) %>"><%= link_to "Settings", edit_user_registration_path %>
       <li class="<%= 'active' if current_page?(destroy_user_session_path) %>"><%= link_to :Logout, destroy_user_session_path, :method => :delete  %></li>
     <% else %>

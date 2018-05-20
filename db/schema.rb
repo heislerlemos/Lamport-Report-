@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20180508153930) do
     t.bigint "evento_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "completed_at"
     t.datetime "completo_em"
     t.index ["evento_id"], name: "index_item_events_on_evento_id"
   end
@@ -83,16 +84,9 @@ ActiveRecord::Schema.define(version: 20180508153930) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  end
-
-  create_table "usertests", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "login"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "item_events", "eventos"
