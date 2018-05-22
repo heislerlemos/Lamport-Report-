@@ -8,56 +8,43 @@ html = markaby do
 html do 
 head do
 title action_name
-link :href => "/assets/abouts.css" , :type => "text/css", :rel => "stylesheet"
+link :href => ("/assets/abouts.css") , :type => ("text/css"), :rel => ("stylesheet")
+link :href => ("https://fonts.googleapis.com/css?family=Abel|Montserrat|Patua+One"), :rel => ("stylesheet")
 end
- 
-    body do
-      1.times do br 
-      end
-          div.icons! :align => "center"  do  
-        a :href => ("https://twitter.com/") do 
-       img :src => ("http://communicasound.com/wp-content/uploads/2017/02/Twitter-Logo-PNG-1.png"), :height => ("35"), :width => ("35")
-     end 
-   end
-     h1 ("About us"), :style => ("color: lightblue; font-size: 100px;") 
-     1.times do br
-     end
-     div.box do 
-        p ("Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo.
+body do
+	3.times do br
+	end
+	
+div.big_image do
+	div.color_gradient do 
+	end
+	div.container do 
+	  h1.brand_quote do 
+	  	("About us")
+	  end
+	  div.brand_quote_second do 
+	  h2  ("Lamport.")
+	end
+	  div.para do
+	  p ("Chicharrones selfies thundercats yuccie disrupt pitchfork dreamcatcher yr 90's DIY gentrify sustainable tacos. Chia live-edge glossier cray twee pitchfork. Pour-over trust fund skateboard four loko,
+	  	 neutra echo park art party taxidermy. Bespoke hell of leggings, 
+	  	 XOXO jean shorts listicle edison bulb. Viral whatever woke, bicycle rights 
+	  	 Lorem ipsum dolor amet listicle flannel keytar tattooed, art party bushwick 
+	  	 pork belly pug disrupt kitsch. Skateboard migas umami etsy drinking vinegar tumblr live-edge small batch prism enamel pin 90's. Intelligentsia migas single-origin coffee butcher. Shabby chic microdosing synth before they sold out messenger bag. Cloud bread blog disrupt meditation synth 
+	  	 echo park chambray everyday carry cornhole post-ironic.waistcoat mumblecore succulents.")
 
-Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor.
-Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+	  end
+	end
+end
 
-Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum.
-
-Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit.
-Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac conse")
-
-     end
-         3.times do br
-        end
-      div.grid_container do
-          div.grid_item   ("Mattis Amet Dapibus Fusce Magna")    
-          div.grid_item   ("Cursus Justo Nibh Sit Ligula")
-          div.grid_item   ("Condimentum Fusce Cursus Mattis Amet")
-          div.grid_item   ("Egestas Cras Quam Ullamcorper Fermentum")
-          div.grid_item   ("Nibh Consectetur Amet Sit Adipiscing")
-          div.grid_item   ("Magna Quam Bibendum Ultricies Venenatis")
-
-      end
-
-    end
-  end
+end
+end
 end
 
 
 
 
-puts "Stay tunned !" 
+
+
+
