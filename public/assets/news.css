@@ -24,6 +24,15 @@ color: black;
 
 }
 
+.field_test {
+  position: absolute;
+  background-color: red;
+  width: 50px;
+  height: 250px;
+  left: 70px;
+  bottom: 60px;
+}
+
 .field_item_one {	
 	    height: auto;
 	        background-image: url('https://www.mydoorsign.com/blog/wp-content/uploads/2014/05/green-building1.jpg');

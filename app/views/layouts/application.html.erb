@@ -41,10 +41,9 @@
   calendarios_show_path %></li>
     <div class="dropdown">
   <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Notes
+    Billboards
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <li class="<%= 'active' if current_page?(lamport_notes_path) %>"><%= link_to "Note Menu", lamport_notes_path %></li>
     <li class="<%= 'active' if current_page?(new_lamport_note_path) %>"><%= link_to "Workflow", twitterposts_path %></li>
   </div>
 </div>
@@ -52,14 +51,15 @@
   <li class="<%= 'active' if current_page?(new_lamport_note_path) %>"><%= link_to "New Note", new_lamport_note_path %></li>-->
       <div class="dropdown">
   <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   Events
+   Menus
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
   <li class="<%= 'active' if current_page?(eventos_path) %>"><%= link_to "Events Menu", eventos_path %></li>
-    <li class="<%= 'active' if current_page?( abouts_index_path) %>"><%= link_to "Abouts", abouts_index_path %></li>
+      <li class="<%= 'active' if current_page?(lamport_notes_path) %>"><%= link_to "Note Menu", lamport_notes_path %></li>
   </div>
 </div>
         <li class="<%= 'active' if current_page?(news_index_path) %>"><%= link_to "News", news_index_path %></li>
+          <li class="<%= 'active' if current_page?( abouts_index_path) %>"><%= link_to "Abouts", abouts_index_path %></li>
        <li class="<%= 'active' if current_page?(edit_user_registration_path) %>"><%= link_to "Settings", edit_user_registration_path %>
       <li class="<%= 'active' if current_page?(destroy_user_session_path) %>"><%= link_to :Logout, destroy_user_session_path, :method => :delete  %></li>
     <% else %>
