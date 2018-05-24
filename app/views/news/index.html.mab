@@ -1,7 +1,0 @@
-def markaby(&block)
-Markaby::Builder.new({}, self ,  &block).to_s
-end
-
-
-page_header = ("Coming soon news page")
-

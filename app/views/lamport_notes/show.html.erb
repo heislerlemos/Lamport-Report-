@@ -11,34 +11,31 @@
 
 
 <head>
-<h1 align="right"> Show <small>report business solution</small></h1>
 <%= stylesheet_link_tag "lamport_notes", :media => "all" %>
 </head>
 <body>
- <div class="field"  style="color: black; border-radius: 4px; background-color: white; width: 700px;   position:absolute;  top:50%; left:26%; margin-left: -5px; border: solid black 2px; margin-top:-200px; box-shadow: 4px 9px; " align="center">
+<br>
+<br>
+<br>
+<br>
+
 <p id="notice"><%= notice %></p>
 
-<div id="formulario">
-
-<div id="new_page">
-   <!---<strong>Titulo:</strong>-->
+  <div id="lamport_show">
+  
+  <h1>
   <%= @lamport_note.titulo %>
-</div>
+  </h1>
 <br>
 <br>
-<div id="new_page">
-  <!---<strong>Texto:</strong>-->
+
+  <p>
   <%= @lamport_note.texto %>
+  <p>
+ 
+ </div>
+<div id="botao">
+  <%= link_to "Back" , lamport_notes_path, :class => "btn btn-lg btn-primary"%>
+ </div>
 </div>
-<br> 
-</div>
-</div>
-  <%= link_to edit_lamport_note_path(@lamport_note) do %> 
-  <i class="fas fa-edit fa-2x" style="color: black; margin-left: 430px;"></i>
-  <% end %>
-
-  <%= link_to lamport_notes_path do  %>
-  <i class="fas fa-undo-alt fa-2x" style="color: black; margin-left: 460px; margin-top: 420px;"></i>
-  <% end %>
-
 </body>

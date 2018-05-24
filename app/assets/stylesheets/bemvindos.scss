@@ -11,10 +11,17 @@ body {
 -o-background-size: cover;
 background-size: cover; 
 
-  
 }
 
+#background_welcome {
+        background-color: rgba(0, 0, 0, 0.4); 
+        
+}
 
+#city {
+        background: url('happy_fox__with__svg__by_digitalcircuit-d51lm70.png') no-repeat;
+        
+}
 div.progress { 
 position: absolute;
 bottom: 55px;

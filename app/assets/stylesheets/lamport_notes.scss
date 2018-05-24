@@ -6,6 +6,30 @@ body {
 
 }
 
+#lamport_show {
+  width: 90%;
+  position: absolute;
+
+  h1 {
+    font-weight: bold;
+    font-size: 6.0rem;
+    margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+    border-bottom: 1px solid #E9E9E9;
+  }
+  p {
+    font-size: 1.5rem;
+    line-height: 1.75;
+    width: 70%;
+  }
+}
+  
+#botao {
+  margin-top: 30%;  
+  padding: .5rem 2rem;
+  border-radius: 6rem;
+  line-height: 200%;
+}
 
 .digg_pagination {
 
@@ -16,33 +40,6 @@ body {
 
 }
 
-
-margem {
-background-color: hsla(120, 60%, 70%, 0.3);
-background-color: #008B8B;
-border-radius: 940px;
-margin-bottom: 40px;
-}
-
-rectangle_title {
-width:440px;
-height: 40px;
-background-color: black;
-border-radius: 2px;
-margin: auto;
-padding: 25px;
-border: 2px solid;
-}
-
-rectangle_form {
-text-justify: inter-word;
-height:	70px;
-width: 440px;
-background-color: white;
-border-bottom: 6px solid black;
-margin: auto;
-border-radius: 2px;
-}
 
 .col-md-4 {
   position: relative;

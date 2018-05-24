@@ -5,7 +5,7 @@
     <link rel="shortcut icon" href="/home/heisler/Desktop/GIT/Lamport-Report-/public/favicon.ico"/>
 
     <%= csrf_meta_tags %>
-    <%= favicon_link_tag 'Lamport.ico' %>
+    <%= favicon_link_tag 'happy_fox__with__svg__by_digitalcircuit-d51lm70 (copy).ico' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
@@ -16,19 +16,19 @@
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-    <p style="margin-left: -173px; margin-top: 10px;"align="right">
+    <p style="margin-left: -173px; margin-top: 10px; position: absolute;"align="right">
 
-<%= link_to image_tag("Lamport.jpg", :alt => "logo", :size => "45x45"), root_path %></p> 
+<%= link_to image_tag("happy_fox__with__svg__by_digitalcircuit-d51lm70.png", :alt => "logo", :size => "45x45"), root_path %></p> 
 
 <% if current_page? lamport_notes_path %> 
     <%= form_tag(lamport_notes_path, :method => "get", id: "search-form") do %>
   <%= text_field_tag :search, params[:search], placeholder: "Search Notes", size:  "70" %>
-      <%= submit_tag "search", class: "btn btn-primary" %>
+      <%= submit_tag "search", class: "btn btn-info" %>
     <% end %>
 <% elsif current_page? eventos_path %>
     <%= form_tag(eventos_path, :method => "get", id: "search-form") do %>
   <%= text_field_tag :search, params[:search], placeholder: "Search Events", size:  "70" %>
-      <%= submit_tag "search", class: "btn btn-primary" %>
+      <%= submit_tag "search", class: "btn btn-info" %>
     <% end %>
 <% end %>
 
@@ -37,29 +37,20 @@
    <% b = 2 %>
    <% if user_signed_in?  then %>
   <!--<li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Welcome", root_path %></li>-->
-    <li class="<%= 'active' if current_page?(calendarios_show_path) %>"><%= link_to "Calendar", 
-  calendarios_show_path %></li>
-    <div class="dropdown">
-  <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Billboards
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <li class="<%= 'active' if current_page?(new_lamport_note_path) %>"><%= link_to "Workflow", twitterposts_path %></li>
-  </div>
-</div>
-  <!--<li class="<%= 'active' if current_page?(lamport_notes_path) %>"><%= link_to "Note Menu", lamport_notes_path %></li>
-  <li class="<%= 'active' if current_page?(new_lamport_note_path) %>"><%= link_to "New Note", new_lamport_note_path %></li>-->
+  
       <div class="dropdown">
   <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   Menus
+   Menu
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
   <li class="<%= 'active' if current_page?(eventos_path) %>"><%= link_to "Events Menu", eventos_path %></li>
       <li class="<%= 'active' if current_page?(lamport_notes_path) %>"><%= link_to "Note Menu", lamport_notes_path %></li>
   </div>
 </div>
-        <li class="<%= 'active' if current_page?(news_index_path) %>"><%= link_to "News", news_index_path %></li>
-          <li class="<%= 'active' if current_page?( abouts_index_path) %>"><%= link_to "Abouts", abouts_index_path %></li>
+                  <li class="<%= 'active' if current_page?( abouts_index_path) %>"><%= link_to "About", abouts_index_path %></li>
+          <li class="<%= 'active' if current_page?(new_lamport_note_path) %>"><%= link_to "Billboard", twitterposts_path %></li>
+            <li class="<%= 'active' if current_page?(calendarios_show_path) %>"><%= link_to "Calendar", 
+  calendarios_show_path %></li>
        <li class="<%= 'active' if current_page?(edit_user_registration_path) %>"><%= link_to "Settings", edit_user_registration_path %>
       <li class="<%= 'active' if current_page?(destroy_user_session_path) %>"><%= link_to :Logout, destroy_user_session_path, :method => :delete  %></li>
     <% else %>
@@ -75,8 +66,6 @@
   </head>
   <body>
       <%= yield %>
-      <!--
-             <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p> -->
+
  </body>
 </html>

@@ -9,6 +9,8 @@
 </head>
 <body>
 <%= stylesheet_link_tag "lamport_notes", :media => "all" %>
+<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet"> 
+
 <br>
 <br>
 
@@ -17,20 +19,16 @@
     <p>Hashtag hoodie mumblecore selfies. Authentic keffiyeh leggings Kickstarter, narwhal jean shorts XOXO Vice Austin cardigan. Organic drinking vinegar freegan pickled.</p>
     <p><%= link_to "Create a Note !", new_lamport_note_path, class: "btn btn-success btn-lg" %></p>
 </div>
-
 <% if user_signed_in? %>
 <% @lamport_notes.each do |lamport_note| %>
 <p align="left">
 <div class="col-md-4">
 <div id="alinhamento">
    <div id="margem" align="center">
-     <p style="color: black; font-size: 22px; font-family: monospace; border-radius: 2px; word-wrap: break-word;">
+     <p style=" font-size: 27px; font-family: 'Alfa Slab One'; border-radius: 2px; word-wrap: break-word;">
      <%= lamport_note.titulo %>
      </p>
-    <!--  <span class="glyphicon glyphicon-list-alt"></span>
-     <div id="rectangle_form" align="center">
-     <% lamport_note.texto %>
-     </div>-->
+
   
       
          <p style="word-wrap: break-word;"><%= lamport_note.author %> reported this <%= time_ago_in_words(lamport_note.created_at) %> ago ! </p>

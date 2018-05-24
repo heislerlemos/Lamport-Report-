@@ -19,11 +19,13 @@
 @import "font-awesome";
 
 
+head {
+	      zoom: 90%; /* all browsers */
 
+}
 
 body {
-
-
+	      zoom: 90%; /* all browsers */
 }
 
 
@@ -33,18 +35,6 @@ body {
 
 }
 
-/**
-
-.alert {
-margin: 3px;
-background-color: black;
-border: solid black 1px;
-width: 170px;
-color: white;
-font-family: monospace;
-}	
-
-**/
 
 .dropdown {
 	margin-top: 5px;
