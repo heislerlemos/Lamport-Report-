@@ -31,7 +31,7 @@
 
   
       
-         <p style="word-wrap: break-word;"><%= lamport_note.author %> reported this <%= time_ago_in_words(lamport_note.created_at) %> ago ! </p>
+         <p style="word-wrap: break-word;"><%= lamport_note.user_email %> reported this <%= time_ago_in_words(lamport_note.created_at) %> ago ! </p>
 
         <p style="margin-right: 100px; margin-bottom: -30px;"><%= link_to edit_lamport_note_path(lamport_note) do %>
         <i class="fas fa-edit fa-2x" style="color: black;"></i>

@@ -8,11 +8,11 @@ class EventosController < ApplicationController
   def index
     #@eventos = Evento.all.order("created_at DESC")
     @evento =  current_user.eventos.build
-    @eventos_paginação = Evento.paginate(:page => params[:page], per_page: 6)
+    @eventos_paginação = Evento.paginate(:page => params[:page], per_page: 6).where(user_id: current_user)
     if params[:search]
       @eventos= Evento.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], per_page: 6)
     else
-      @eventos = Evento.all.order("created_at DESC").paginate(:page => params[:page], per_page: 6)
+      @eventos = Evento.where(user_id: current_user).paginate(:page => params[:page], per_page: 6)
     end
 
   end
