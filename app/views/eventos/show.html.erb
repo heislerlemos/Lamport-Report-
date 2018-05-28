@@ -32,11 +32,11 @@
 </div>
 </div>
 
-<%= link_to edit_evento_path(@evento) do  %>
- <i class="fas fa-edit fa-2x" style="color: black;"></i> 
-<% end %>
+<%= link_to "Edit", edit_evento_path(@evento), :class => "btn btn-primary" %>
 
-<%= link_to eventos_path do %>
-<i class="fas fa-undo-alt fa-2x" style="color: black; margin-left: 700px; "></i>
-<% end %>
+
+<i style="margin-left: 700px;">
+<%= link_to "Back", eventos_path, :class => "btn  btn-primary"%>
+</i>
+
 </div>
