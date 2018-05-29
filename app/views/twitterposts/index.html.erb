@@ -1,5 +1,6 @@
 
 <%= stylesheet_link_tag "twitterposts", :media => "all" %>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 
 
 
@@ -18,9 +19,9 @@
 <%= render :partial => @twitterposts %>	
 </div>
 
-<div class="digg_pagination" align="center" style="margin-bottom: 100px; " >
+<div class="digg_pagination" align="center" style="margin-bottom: 100px;">
     
-    <div class="page_info" align="right">
+    <div class="page_info" align="center">
       <%= page_entries_info @twitterposts_paginação %> 
       <%= will_paginate @twitterposts_paginação  %>
 

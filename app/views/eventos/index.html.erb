@@ -58,13 +58,13 @@
 <br>
 <br>
 <br>
-<br>
-<br>
+
 </div>
 <div class="digg_pagination" align="center" style="margin-top: 150px;">
     <div class="page_info">
       <%= page_entries_info @eventos_paginação %>
     </div>
-        <%= will_paginate @eventos_paginação  %>
+        <%= will_paginate @eventos_paginação, renderer: BootstrapPagination::Rails  %>
 
 
+</div>

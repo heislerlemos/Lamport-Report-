@@ -14,6 +14,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap'
 gem 'google-api-client', '~> 0.11'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
