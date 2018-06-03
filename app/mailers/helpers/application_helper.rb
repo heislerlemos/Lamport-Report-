@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-
+=begin
 	def simple_error_messages_for(object_name)
 	object = instante_variable_get(*@#{object_name}*)
 		return if object.error.empty?
@@ -25,6 +25,7 @@ markaby do
 
 		end
 	end
+=end
 end
 
 
