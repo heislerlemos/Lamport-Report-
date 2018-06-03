@@ -9,9 +9,11 @@ Bundler.require(*Rails.groups)
 module Lamport
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+=begin
     config.load_defaults 5.1
     config.assets.enabled = true
     config.assets.prefix = Rails.root.join('tmp/assets').to_s
+=end
     
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
