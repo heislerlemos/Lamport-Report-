@@ -1,6 +1,15 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+</head>
 <%= stylesheet_link_tag "twitterposts", :media => "all" %>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<%= favicon_link_tag 'happy_fox__with__svg__by_digitalcircuit-d51lm70 (copy).ico' %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<%= csrf_meta_tags %>
+
 
 
 
@@ -16,14 +25,15 @@
 <%= render :partial => 'message_form' %>
 
 <div id="twitterposts">
-<%= render :partial => @twitterposts %>	
+<%= render :partial => @twitterposts_paginação %> 
 </div>
 
 <div class="digg_pagination" align="center" style="margin-bottom: 100px;">
     
     <div class="page_info" align="center">
       <%= page_entries_info @twitterposts_paginação %> 
-      <%= will_paginate @twitterposts_paginação  %>
+      <%= will_paginate @twitterposts_paginação %>
 
     </div>
 </div>
+</html>

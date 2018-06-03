@@ -1,2 +1,0 @@
-page.insert_html :top, :twitterposts, :partial => @twitterpost
-page[@twitterpost].visual_effect :highlight

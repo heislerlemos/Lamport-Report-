@@ -2,14 +2,16 @@
 <html>
   <head>
     <title>Lamport</title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="/home/heisler/Desktop/GIT/Lamport-Report-/public/favicon.ico"/>
+   <link rel="shortcut icon" href="/home/heisler/Desktop/GIT/Lamport-Report-/public/happy_fox__with__svg__by_digitalcircuit-d51lm70.ico"/>
 
     <%= csrf_meta_tags %>
     <%= favicon_link_tag 'happy_fox__with__svg__by_digitalcircuit-d51lm70 (copy).ico' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Pacifico|Press+Start+2P|Sacramento|Shadows+Into+Light|Shrikhand|Special+Elite" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -48,11 +50,11 @@
       <li class="<%= 'active' if current_page?(lamport_notes_path) %>"><%= link_to "Note Menu", lamport_notes_path %></li>
   </div>
 </div>
-                  <li class="<%= 'active' if current_page?( abouts_index_path) %>"><%= link_to "About", abouts_index_path %></li>
           <li class="<%= 'active' if current_page?(new_lamport_note_path) %>"><%= link_to "Billboard", twitterposts_path %></li>
             <li class="<%= 'active' if current_page?(calendarios_show_path) %>"><%= link_to "Calendar", 
   calendarios_show_path %></li>
        <li class="<%= 'active' if current_page?(edit_user_registration_path) %>"><%= link_to "Settings", edit_user_registration_path %>
+  <li class="<%= 'active' if current_page?( abouts_index_path) %>"><%= link_to "About", abouts_index_path %></li>
       <li class="<%= 'active' if current_page?(destroy_user_session_path) %>"><%= link_to :Logout, destroy_user_session_path, :method => :delete  %></li>
     <% else %>
   <!--<li class="<%= 'active' if current_page?(eventos_path) %>"><%= link_to "Events", eventos_path %></li>

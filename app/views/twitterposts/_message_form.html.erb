@@ -1,6 +1,7 @@
 <%= form_tag(:controller => "twitterposts", :action => "create", :remote => true ) do %>
 
   <%= label_tag(:message, "What are you doing?") %><br />
-  <%= text_area_tag(:message, nil, :size => "44x6") %><br /> 
-  <%= submit_tag("Update") %>
+  <%= text_area_tag(:message, nil, :size => "84x6") %><br /> 
+  <br>
+  <%= submit_tag("Update", :class => "btn btn-primary" ) %>
 <% end %>
