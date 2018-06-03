@@ -10,19 +10,21 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-=begin
+
   def create
     @user = User.new(user_params)
             # Tell the UserMailer to send a welcome email after save
       
+
 if @user.save
-      ExampleMailer.sample_email(@user).deliver
+      #ExampleMailer.sample_email(@user).deliver
      redirect_to root_path
      else
      print "not saved" 
    end
+
 end
-=end
+
 
   # GET /resource/edit
   # def edit
