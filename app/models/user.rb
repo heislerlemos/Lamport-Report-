@@ -7,5 +7,6 @@ class User < ApplicationRecord
 
   has_many :lamport_notes
   has_many :eventos
+  has_many :twitterposts
 
 end
