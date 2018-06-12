@@ -11,7 +11,7 @@ class TwitterpostsController < ApplicationController
   
   def create
    #@twttes =  current_user.twitterposts.build
-     #@twitterpost = Twitterpost.create(:message => params[:message])
+   #@twitterpost = Twitterpost.create(:message => params[:message])
     @twitterpost = current_user.twitterposts.build(:message => params[:message])
 
     respond_to do |format|
