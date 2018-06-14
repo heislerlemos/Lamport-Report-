@@ -8,9 +8,9 @@
 <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet"> 
 <% if user_signed_in? then%>
   <div class="jumbotron">
-    <h1>Checks Your team Events</h1>
-    <p>Hashtag hoodie mumblecore selfies. Authentic keffiyeh leggings Kickstarter, narwhal jean shorts XOXO Vice Austin cardigan. Organic drinking vinegar freegan pickled.</p>
-    <p><%= link_to "Create a Event!", new_evento_path, class: "btn btn-success btn-lg" %></p>
+    <h1>Checks your events</h1>
+    <p>Add check list to your events to the day</p>
+    <p><%= link_to "Create a event", new_evento_path, class: "btn btn-success btn-lg" %></p>
 </div>
 
 <% end %>

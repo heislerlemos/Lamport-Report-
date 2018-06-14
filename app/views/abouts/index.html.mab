@@ -27,12 +27,14 @@ div.big_image do
 	  h2  ("Lamport since 2018")
 	end
 	  div.para do
-	  p ("Chicharrones selfies thundercats yuccie disrupt pitchfork dreamcatcher yr 90's DIY gentrify sustainable tacos. Chia live-edge glossier cray twee pitchfork. Pour-over trust fund skateboard four loko,
-	  	 neutra echo park art party taxidermy. Bespoke hell of leggings, 
-	  	 XOXO jean shorts listicle edison bulb. Viral whatever woke, bicycle rights 
-	  	 Lorem ipsum dolor amet listicle flannel keytar tattooed, art party bushwick 
-	  	 pork belly pug disrupt kitsch. Skateboard migas umami etsy drinking vinegar tumblr live-edge small batch prism enamel pin 90's. Intelligentsia migas single-origin coffee butcher. Shabby chic microdosing synth before they sold out messenger bag. Cloud bread blog disrupt meditation synth 
-	  	 echo park chambray everyday carry cornhole post-ironic.waistcoat mumblecore succulents.")
+	  p ("Lamport note report business solution is a app that allow you to post notes events and workflow.
+It started in  2018 the goal off this project is to make people daily task to focus in one place and to maximize production.
+The logo is our mascot Foxylamp it  symbolize the focus and adaptation.
+We are a new at the web market.
+We want to make better connections with our user 
+support us at lamportruby@gmail.com and on github.
+
+ 		")
 
 	  end
 	end
