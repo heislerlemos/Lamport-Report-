@@ -43,7 +43,6 @@ ActiveRecord::Schema.define(version: 20180610114826) do
     t.bigint "evento_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "completed_at"
     t.datetime "completo_em"
     t.index ["evento_id"], name: "index_item_events_on_evento_id"
   end
@@ -51,6 +50,7 @@ ActiveRecord::Schema.define(version: 20180610114826) do
   create_table "lamport_notes", force: :cascade do |t|
     t.string "titulo"
     t.text "texto"
+    t.string "email", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
@@ -81,12 +81,11 @@ ActiveRecord::Schema.define(version: 20180610114826) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
-    t.integer "failed_attempts", default: 0, null: false
+    t.integer "failed_attempts", default: 10, null: false
     t.string "unlock_token"
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
