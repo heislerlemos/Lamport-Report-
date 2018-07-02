@@ -11,7 +11,7 @@ module Lamport
     # Initialize configuration defaults for originally generated Rails version.
 
     config.load_defaults 5.1
-    config.assets.enabled = false
+    config.assets.enabled = true
     config.assets.prefix = Rails.root.join('tmp/assets').to_s
 
     
