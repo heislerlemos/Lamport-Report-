@@ -63,11 +63,11 @@ class LamportNotesController < ApplicationController
   def update
     respond_to do |format|
       if @lamport_note.update(lamport_note_params)
-        format.html { redirect_to @lamport_note, notice: 'Lamport note was successfully updated.' }
-        format.json { render :show, status: :ok, location: @lamport_note }
+        format.html { redirect_to @lamport_note, sucess: 'Lamport note was successfully updated.' }
+        #format.json { render :show, status: :ok, location: @lamport_note }
       else
         format.html { render :edit }
-        format.json { render json: @lamport_note.errors, status: :unprocessable_entity }
+        #format.json { render json: @lamport_note.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -77,7 +77,7 @@ class LamportNotesController < ApplicationController
   def destroy
     @lamport_note.destroy
     respond_to do |format|
-      format.html { redirect_to lamport_notes_url, notice: 'Lamport note was successfully destroyed.' }
+      format.html { redirect_to lamport_notes_url, danger: 'Lamport note was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

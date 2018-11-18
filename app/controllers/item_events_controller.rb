@@ -3,22 +3,20 @@ class ItemEventsController < ApplicationController
 	before_action :set_item_event, except: [:create]
 
 	def create
-	@item_event = @evento.item_event.create(item_event_params)
-	redirect_to @evento
+	
+    @item_event = @evento.item_event.create(item_event_params)
+	redirect_to @evento,  success:  "Item was created whit success"
+
 	end
 
 	def destroy
-	if @item_event.destroy
-		flash[:success] = "Item event was deleted"
-	else
-		flash[:error] = "Item event was not deleted"
-	end
-	redirect_to @evento
+    @item_event.destroy
+	redirect_to @evento, danger: "Item was deleted "
 	end
 
 	def completo
 		@item_event.update_attribute(:completo_em, Time.now)
-		redirect_to @evento, notice: "Item event completed"
+		redirect_to @evento, info: "Item event completed"
 	end
 
 

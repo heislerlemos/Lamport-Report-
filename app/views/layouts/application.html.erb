@@ -62,18 +62,26 @@
   <!--<li class="<%= 'active' if current_page?( user_session_path) %>"><%= link_to "Sign In",  user_session_path %></li>-->
      <!-- <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Welcome", root_path %></li>-->
 <% end %>
+
   </ul>
+            <% flash.each do  |key, value |%>
+               <div class='alert alert-<%= key %> alert-dismissible'><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <%= value  %> 
+    </div>
+
+    <% end %>
   </div>
 </nav>
+      <%= yield %>
+      <div>
+
+    
 
   </head>
   <body>
-      <%= yield %>
-          <% flash.each do  |key, value |%>
-    <div class='alert alert-<%= key %>'>
-    <%= value  %> 
-    </div>
-    <% end %>
+  
 
+
+ 
  </body>
 </html>

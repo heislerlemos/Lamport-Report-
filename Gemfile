@@ -16,6 +16,7 @@ gem 'puma', '~> 3.7'
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
 gem 'google-api-client', '~> 0.11'
+gem "bootstrap_flash_messages", "~> 1.0.1"
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
