@@ -30,6 +30,13 @@
 
 </div>
 
+            <% flash.each do  |key, value |%>
+               <div class='alert alert-<%= key %> alert-dismissible'><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <%= value  %> 
+    </div>
+
+    <% end %>
+    
 <div class="digg_pagination" align="center" style="margin-bottom: 100px;">
     
     <div class="page_info" align="center">
