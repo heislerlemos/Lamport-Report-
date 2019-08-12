@@ -1,17 +1,35 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+ <div class="container">
 
-<div class="field"  style="color: black; border-radius: 4px; background-color: white; width: 700px;   position:absolute;  top:50%; left:25%; margin-left: -5px; border: solid black 2px; margin-top:-200px; box-shadow: 4px 9px " align="center">
-
+<div class="field"  style="color: black; border-radius: 1px; background-color: white; width: 100%; height: 300px;   border: solid black 1px; box-shadow: 2px 3px " align="center">
+<br>
+<br>
+ <div
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
   </div>
+  <br>
+<br>
+<br>
+<br>
+<br>
 
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <%= f.submit "Send me reset password instructions" , :class => "btn btn-primary" %>
   </div>
 <% end %>
 </div>
 <% render "devise/shared/links" %>
+</div>

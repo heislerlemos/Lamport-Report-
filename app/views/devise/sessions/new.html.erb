@@ -7,16 +7,18 @@
 <br>
 <br>
 <br>
-  <div class="field"  style="color: black; background-color: white; width: 800px;   position:absolute;  top:50%; left:22%; margin-left: -5px; border: solid black 2px; margin-top:-200px; box-shadow: 4px 9px " align="center">
+<div class="container">
+    <div class="field"  style="color: black; background-color: white; width: 100%;  border: solid black 1px;  box-shadow: 2px 3px " align="center">
+
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <p style="margin: 20px; padding: 3px; " align="center"><%= image_tag("happy_fox__with__svg__by_digitalcircuit-d51lm70.png", :alt => "logo", :size => "85x85") %></p>
     <%= f.label :email %><br>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" , :size => "65"%>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" , :size => "65" , class: 'form-control'%>
 <br>
 <br>
     <%= f.label :password %><br>
-    <%= f.password_field :password, autocomplete: "off" , :size => "65" %>
+    <%= f.password_field :password, autocomplete: "off" , :size => "65" , class: 'form-control' %>
 
   <% if devise_mapping.rememberable? -%>
    <br>      <%= f.check_box :remember_me %>
@@ -32,3 +34,4 @@
   </div>
 <br>
 <br>
+</div>
