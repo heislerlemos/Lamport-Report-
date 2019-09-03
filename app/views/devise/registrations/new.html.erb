@@ -8,6 +8,9 @@
 <br>
 <br>
 
+<style>
+
+  </style>
  <div class="container">
   <div class="field"  style="color: black; border-radius: 4px; background-color: white; width: 100%; border: solid black 1px;  box-shadow: 2px 3px " align="center">
 
@@ -16,7 +19,7 @@
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' , style: "text-align: center;" %>
   </div>
 
   <div class="field">
@@ -24,12 +27,12 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" , class: 'form-control' %>
+    <%= f.password_field :password, autocomplete: "off" , class: 'form-control' , style: "text-align: center;" %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" , class: 'form-control'  %>
+    <%= f.password_field :password_confirmation, autocomplete: "off" , class: 'form-control', style: "text-align: center;" %>
   </div>
   <br>
   <div class="actions">
