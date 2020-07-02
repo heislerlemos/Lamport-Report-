@@ -35,7 +35,7 @@ gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'delayed_job_active_record'
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'devise', '~> 4.4', '>= 4.4.1'
+gem 'devise', '~> 4.7'
 #gem paperclip
 #gem betterror
 gem 'turbolinks', '~> 5'
