@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  mount PdfjsViewer::Rails::Engine => "/pdfjs", as: 'pdfjs'
+  
+
   get 'news/index'
 
   get 'abouts/index'

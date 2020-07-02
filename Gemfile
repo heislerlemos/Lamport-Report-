@@ -12,6 +12,8 @@ gem 'rails', '~> 5.1.5'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
+gem 'pdfjs_viewer-rails'
+
 # Use SCSS for stylesheets
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
