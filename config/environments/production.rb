@@ -102,7 +102,7 @@ config.action_mailer.smtp_settings = {
    enable_starttls_auto: true  
 }
 =end
-config.serve_static_assets = true
+#config.serve_static_assets = true
 
 
 
