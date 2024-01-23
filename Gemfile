@@ -29,7 +29,7 @@ gem 'mailgun-ruby', '~>1.0.2', require: 'mailgun'
 gem 'markaby', '~> 0.9.0'
 gem 'font-awesome-sass'
 # gem 'therubyracer', platforms: :ruby
-gem 'bootstrap', '~> 4.0'
+gem 'bootstrap', '~> 4.3'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 # Use CoffeeScript for .coffee assets and views
 gem 'delayed_job_active_record'
